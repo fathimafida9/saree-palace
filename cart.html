@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart – Saree Palace</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .checkout-steps { display:flex; gap:0; margin-bottom:32px; }
+    .step { flex:1; text-align:center; padding:12px; font-size:12.5px; font-weight:500; position:relative; }
+    .step::after { content:''; position:absolute; right:0; top:50%; transform:translateY(-50%); width:0; height:0; border-top:18px solid transparent; border-bottom:18px solid transparent; border-left:16px solid currentColor; z-index:1; }
+    .step:last-child::after { display:none; }
+    .step.done { background:var(--gold); color:var(--maroon-dk); }
+    .step.active { background:var(--maroon); color:var(--gold-lt); }
+    .step.pending { background:var(--light-gray); color:var(--mid-gray); }
+    .step.done::after { border-left-color:var(--gold); }
+    .step.active::after { border-left-color:var(--maroon); }
+    .step.pending::after { border-left-color:var(--light-gray); }
+    .payment-form { margin-top:20px; }
+    .payment-option { display:flex; align-items:center; gap:12px; padding:14px 16px; border:1.5px solid var(--light-gray); border-radius:10px; margin-bottom:10px; cursor:pointer; transition:all var(--transition); }
+    .payment-option:hover, .payment-option.selected { border-color:var(--maroon); background:var(--cream); }
+    .payment-option input[type=radio] { accent-color:var(--maroon); width:16px; height:16px; }
+    .payment-option-label { font-size:13.5px; font-weight:500; }
+    .payment-option-icon { font-size:22px; }
+    .empty-cart { text-align:center; padding:80px 40px; }
+    .empty-cart h3 { font-family:'Playfair Display',serif; font-size:28px; color:var(--maroon); margin-bottom:12px; }
+    .empty-cart p { color:var(--mid-gray); margin-bottom:28px; }
+  </style>
+</head>
+<body>
+
+<div class="announcement-bar">
+  <span>✦ Free Shipping on orders above ₹1499 &nbsp;&nbsp; ✦ Use code PALACE10 for 10% off &nbsp;&nbsp; ✦ COD Available!</span>
+</div>
+
+<header class="header">
+  <div class="header-top">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      <div class="logo-text">
+        <span class="logo-main">Saree Palace</span>
+        <span class="logo-sub">Est. 1987 · Handcrafted Elegance</span>
+      </div>
+    </a>
+    <nav class="header-nav">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="product.html">Products</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-box">🔍 Search sarees...</div>
+      <a href="cart.html" class="btn-cart">🛍 Cart (2)</a>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero" style="padding:40px 60px">
+  <div class="page-hero-content">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span> Your Cart</div>
+    <h1>Shopping Cart</h1>
+    <p>Review your items and proceed to checkout.</p>
+  </div>
+</section>
+
+<!-- CHECKOUT STEPS -->
+<div style="padding:20px 60px 0; background:#fff">
+  <div class="checkout-steps">
+    <div class="step done">✓ Cart</div>
+    <div class="step active">Checkout</div>
+    <div class="step pending">Payment</div>
+    <div class="step pending">Order Summary</div>
+  </div>
+</div>
+
+<!-- CART LAYOUT -->
+<div class="cart-layout">
+
+  <!-- CART ITEMS -->
+  <div class="cart-items-section">
+    <h2>Your Items <span style="font-size:15px;color:var(--mid-gray);font-family:'Jost',sans-serif;font-weight:400">(2 items)</span></h2>
+
+    <div class="cart-item">
+      <div class="cart-item-img" style="overflow:hidden"><img src="all.jpg.jfif" alt="Saree" style="width:100%;height:100%;object-fit:cover;border-radius:10px"/></div>
+      <div class="cart-item-info">
+        <h4>Kanjivaram Silk Saree</h4>
+        <p>Pure Silk · Red & Gold · Size: 6m</p>
+        <div class="cart-item-controls">
+          <div class="qty-selector">
+            <button class="qty-btn" onclick="updateQty(this,-1)">−</button>
+            <div class="qty-num">1</div>
+            <button class="qty-btn" onclick="updateQty(this,1)">+</button>
+          </div>
+          <span class="cart-item-price">₹3,499</span>
+          <button class="remove-btn" onclick="removeItem(this)">✕ Remove</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart-item">
+      <div class="cart-item-img" style="overflow:hidden"><img src="anarkali.jfif" alt="Suit" style="width:100%;height:100%;object-fit:cover;border-radius:10px"/></div>
+      <div class="cart-item-info">
+        <h4>Embroidered Anarkali Suit</h4>
+        <p>Crepe · Deep Purple · Size: M</p>
+        <div class="cart-item-controls">
+          <div class="qty-selector">
+            <button class="qty-btn" onclick="updateQty(this,-1)">−</button>
+            <div class="qty-num">1</div>
+            <button class="qty-btn" onclick="updateQty(this,1)">+</button>
+          </div>
+          <span class="cart-item-price">₹1,899</span>
+          <button class="remove-btn" onclick="removeItem(this)">✕ Remove</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- DELIVERY ADDRESS -->
+    <div style="background:#fff;border-radius:14px;padding:24px 28px;box-shadow:var(--shadow-sm);margin-top:28px">
+      <h3 style="font-family:'Playfair Display',serif;font-size:20px;color:var(--maroon);margin-bottom:20px">Delivery Address</h3>
+      <div class="form-row">
+        <div class="form-group"><label>Full Name</label><input type="text" placeholder="Your full name"/></div>
+        <div class="form-group"><label>Phone</label><input type="text" placeholder="+91 XXXXXXXXXX"/></div>
+      </div>
+      <div class="form-group"><label>Address</label><input type="text" placeholder="House No., Street, Area"/></div>
+      <div class="form-row">
+        <div class="form-group"><label>City</label><input type="text" placeholder="City"/></div>
+        <div class="form-group"><label>Pincode</label><input type="text" placeholder="560001"/></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>State</label>
+          <select><option>Karnataka</option><option>Tamil Nadu</option><option>Maharashtra</option><option>Delhi</option><option>West Bengal</option><option>Telangana</option></select>
+        </div>
+        <div class="form-group"><label>Delivery Type</label>
+          <select><option>Standard (Free · 3-5 days)</option><option>Express (₹99 · 1-2 days)</option></select>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAYMENT METHOD -->
+    <div style="background:#fff;border-radius:14px;padding:24px 28px;box-shadow:var(--shadow-sm);margin-top:20px">
+      <h3 style="font-family:'Playfair Display',serif;font-size:20px;color:var(--maroon);margin-bottom:20px">Payment Method</h3>
+      <div class="payment-option selected">
+        <input type="radio" name="pay" checked/><span class="payment-option-icon">💳</span>
+        <span class="payment-option-label">Credit / Debit Card</span>
+      </div>
+      <div class="payment-option">
+        <input type="radio" name="pay"/><span class="payment-option-icon">📱</span>
+        <span class="payment-option-label">UPI (PhonePe, GPay, Paytm)</span>
+      </div>
+      <div class="payment-option">
+        <input type="radio" name="pay"/><span class="payment-option-icon">🏦</span>
+        <span class="payment-option-label">Net Banking</span>
+      </div>
+      <div class="payment-option">
+        <input type="radio" name="pay"/><span class="payment-option-icon">💵</span>
+        <span class="payment-option-label">Cash on Delivery (COD)</span>
+      </div>
+      <div style="margin-top:20px">
+        <div class="form-group"><label>Card Number</label><input type="text" placeholder="XXXX XXXX XXXX XXXX"/></div>
+        <div class="form-row">
+          <div class="form-group"><label>Expiry</label><input type="text" placeholder="MM / YY"/></div>
+          <div class="form-group"><label>CVV</label><input type="text" placeholder="XXX"/></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ORDER SUMMARY -->
+  <div class="order-summary-card">
+    <h3>Order Summary</h3>
+
+    <div class="summary-row"><span>Kanjivaram Silk Saree × 1</span><span>₹3,499</span></div>
+    <div class="summary-row"><span>Embroidered Anarkali × 1</span><span>₹1,899</span></div>
+    <div class="summary-row"><span>Subtotal</span><span>₹5,398</span></div>
+    <div class="summary-row"><span>Discount (PALACE10)</span><span style="color:#2e7d32">−₹540</span></div>
+    <div class="summary-row"><span>Delivery</span><span style="color:#2e7d32">FREE</span></div>
+    <div class="summary-row total"><span>Total</span><span>₹4,858</span></div>
+
+    <div style="margin-bottom:16px">
+      <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.8px;color:var(--mid-gray);margin-bottom:8px">Have a Coupon?</div>
+      <div class="coupon-box">
+        <input type="text" placeholder="Enter coupon code"/>
+        <button class="btn-gold" style="padding:10px 16px;font-size:12px;border-radius:8px;white-space:nowrap">Apply</button>
+      </div>
+    </div>
+
+    <div style="background:var(--cream);border-radius:10px;padding:12px 16px;margin-bottom:20px;font-size:12.5px;color:var(--mid-gray)">
+      <p>🎁 You save <strong style="color:var(--maroon)">₹2,681</strong> on this order!</p>
+    </div>
+
+    <a href="#" onclick="alert('🎉 Order Placed Successfully!\n\nThank you for shopping at Saree Palace.\nYour order will be delivered in 3-5 business days.')" class="btn-primary" style="width:100%;text-align:center;display:block;margin-bottom:12px">
+      ✦ Place Order
+    </a>
+    <a href="collections.html" class="btn-outline-dark" style="width:100%;text-align:center;display:block">Continue Shopping</a>
+
+    <div style="margin-top:20px;text-align:center;font-size:12px;color:var(--mid-gray)">
+      🔒 Secure Checkout · SSL Encrypted<br/>
+      <span style="margin-top:6px;display:block">📦 Easy Returns · ⭐ 100% Genuine</span>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo">
+        <span class="logo-icon">✦</span>
+        <div class="logo-text">
+          <span class="logo-main" style="color:var(--gold-lt)">Saree Palace</span>
+          <span class="logo-sub">Est. 1987 · Handcrafted Elegance</span>
+        </div>
+      </div>
+      <p>Your trusted destination for authentic Indian ethnic wear.</p>
+      <div class="footer-social">
+        <div class="social-icon">📘</div><div class="social-icon">📸</div>
+        <div class="social-icon">💬</div><div class="social-icon">▶️</div>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Quick Links</h5>
+      <a href="index.html">Home</a><a href="collections.html">Collections</a>
+      <a href="about.html">About Us</a><a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col"><h5>Categories</h5>
+      <a href="collections.html">Silk Sarees</a><a href="collections.html">Cotton Sarees</a>
+      <a href="collections.html">Bridal Sarees</a>
+    </div>
+    <div class="footer-col"><h5>Help</h5>
+      <a href="contact.html">Track Order</a><a href="contact.html">Returns</a>
+      <a href="contact.html">FAQ</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Saree Palace. All rights reserved.</p>
+    <p><a href="#">Privacy Policy</a> · <a href="#">Terms</a></p>
+  </div>
+</footer>
+
+<script>
+  function updateQty(btn, d) {
+    const numEl = btn.parentElement.querySelector('.qty-num');
+    let v = parseInt(numEl.textContent) + d;
+    numEl.textContent = Math.max(1, v);
+  }
+  function removeItem(btn) {
+    if(confirm('Remove this item from cart?')) {
+      btn.closest('.cart-item').style.opacity = '0';
+      btn.closest('.cart-item').style.transition = '0.3s';
+      setTimeout(() => btn.closest('.cart-item').remove(), 300);
+    }
+  }
+  document.querySelectorAll('.payment-option').forEach(opt => {
+    opt.addEventListener('click', function() {
+      document.querySelectorAll('.payment-option').forEach(o => o.classList.remove('selected'));
+      this.classList.add('selected');
+      this.querySelector('input').checked = true;
+    });
+  });
+</script>
+<script src="script.js"></script>
+</body>
+</html>
