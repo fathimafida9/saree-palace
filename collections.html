@@ -5,243 +5,273 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Collections – Saree Palace</title>
   <link rel="stylesheet" href="style.css"/>
-  <style>
-    .product-img { height:300px; overflow:hidden; position:relative; }
-    .product-img img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.4s ease; }
-    .product-card:hover .product-img img { transform:scale(1.06); }
-  </style>
 </head>
 <body>
+
 <div class="announcement-bar">
-  <span>✦ Free Shipping on orders above ₹1499 &nbsp;&nbsp; ✦ Use code PALACE10 for 10% off &nbsp;&nbsp; ✦ New Arrivals Every Week!</span>
+  <span>✦ Free Shipping on orders above ₹1499 &nbsp;&nbsp;&nbsp; ✦ Use code PALACE10 for 10% off &nbsp;&nbsp;&nbsp; ✦ New Arrivals Every Week! &nbsp;&nbsp;&nbsp; ✦ Authentic Handloom &amp; Silk Sarees since 1987</span>
 </div>
+
 <header class="header">
   <div class="header-top">
     <a href="index.html" class="logo">
-      <span class="logo-icon">✦</span>
-      <div class="logo-text"><span class="logo-main">Saree Palace</span><span class="logo-sub">Est. 1987 · Handcrafted Elegance</span></div>
+      <div class="logo-icon">✦</div>
+      <div class="logo-text">
+        <span class="logo-main">Saree Palace</span>
+        <span class="logo-sub">Est. 1987 · Handcrafted Elegance</span>
+      </div>
     </a>
     <nav class="header-nav">
-      <a href="index.html">Home</a><a href="collections.html" class="active">Collections</a>
-      <a href="product.html">Products</a><a href="about.html">About Us</a><a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="collections.html" class="active">Collections</a>
+      <a href="product.html">Products</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="header-actions">
-      <div class="search-box">🔍 Search sarees...</div>
-      <a href="cart.html" class="btn-cart">🛍 Cart (2)</a>
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" placeholder="Search sarees…"/>
+        <div class="search-results-panel" id="search-panel"></div>
+      </div>
+      <a href="cart.html" class="btn-cart">🛍 Cart (<span class="cart-count">0</span>)</a>
     </div>
   </div>
-  <nav class="category-nav">
-    <a href="collections.html" class="active"><span class="cat-dot" style="background:var(--gold)"></span>All</a>
-    <a href="collections.html"><span class="cat-dot" style="background:#c9973a"></span>Silk Sarees</a>
-    <a href="collections.html"><span class="cat-dot" style="background:#8B4513"></span>Cotton Sarees</a>
-    <a href="collections.html"><span class="cat-dot" style="background:#c0392b"></span>Bridal Sarees</a>
-    <a href="collections.html"><span class="cat-dot" style="background:#8e44ad"></span>Designer</a>
-    <a href="collections.html"><span class="cat-dot" style="background:#e91e63"></span>Party Wear</a>
+  <nav class="category-nav" id="cat-nav">
+    <a href="#" class="cat-nav-link active" data-filter="all"><span class="cat-dot" style="background:var(--gold)"></span>All</a>
+    <a href="#" class="cat-nav-link" data-filter="silk"><span class="cat-dot" style="background:#c9973a"></span>Silk Sarees</a>
+    <a href="#" class="cat-nav-link" data-filter="cotton"><span class="cat-dot" style="background:#8B4513"></span>Cotton Sarees</a>
+    <a href="#" class="cat-nav-link" data-filter="bridal"><span class="cat-dot" style="background:#c0392b"></span>Bridal Sarees</a>
+    <a href="#" class="cat-nav-link" data-filter="designer"><span class="cat-dot" style="background:#8e44ad"></span>Designer</a>
+    <a href="#" class="cat-nav-link" data-filter="party"><span class="cat-dot" style="background:#e91e63"></span>Party Wear</a>
   </nav>
 </header>
 
 <section class="page-hero">
-  <div class="page-hero-content">
-    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span> Collections</div>
-    <h1>Our Collections</h1>
-    <p>From heritage silk weaves to contemporary designer pieces — explore India's finest ethnic wear.</p>
-  </div>
+  <div class="breadcrumb"><a href="index.html">Home</a><span>›</span> Collections</div>
+  <h1>Our <em style="font-style:italic;color:var(--gold-lt)">Collections</em></h1>
+  <p>From heritage silk weaves to contemporary designer pieces — explore India's finest ethnic wear.</p>
 </section>
 
+<!-- FILTER BAR -->
 <div class="filter-bar">
   <span class="filter-label">Filter:</span>
-  <div class="filter-chips">
-    <span class="filter-chip active">All</span>
-    <span class="filter-chip">Silk Sarees</span>
-    <span class="filter-chip">Cotton Sarees</span>
-    <span class="filter-chip">Bridal</span>
-    <span class="filter-chip">Designer</span>
-    <span class="filter-chip">Party Wear</span>
-    <span class="filter-chip">Under ₹1499</span>
-    <span class="filter-chip">Under ₹2999</span>
+  <div class="filter-chips" id="filter-chips">
+    <span class="filter-chip active" data-filter="all">All</span>
+    <span class="filter-chip" data-filter="silk">Silk Sarees</span>
+    <span class="filter-chip" data-filter="cotton">Cotton Sarees</span>
+    <span class="filter-chip" data-filter="bridal">Bridal</span>
+    <span class="filter-chip" data-filter="designer">Designer</span>
+    <span class="filter-chip" data-filter="party">Party Wear</span>
+    <span class="filter-chip" data-filter="under1499">Under ₹1,499</span>
+    <span class="filter-chip" data-filter="under2999">Under ₹2,999</span>
   </div>
   <div class="filter-sort">Sort by:
-    <select><option>Popularity</option><option>Price: Low to High</option><option>Price: High to Low</option><option>Newest First</option></select>
+    <select id="sort-select">
+      <option value="default">Popularity</option>
+      <option value="low-high">Price: Low to High</option>
+      <option value="high-low">Price: High to Low</option>
+      <option value="discount">Best Discount</option>
+    </select>
   </div>
 </div>
 
-<!-- SILK SAREES -->
-<section class="section">
-  <div class="section-header">
-    <span class="section-label">Heritage Weaves</span>
-    <h2 class="section-title">Silk <em>Sarees</em></h2>
-    <div class="divider"></div>
-  </div>
-  <div class="product-grid">
-    <a href="product.html" class="product-card">
-      <div class="product-img">
-        <img src="13.jfif" alt="Kanjivaram Silk Saree"/>
-        <div class="product-badge">Bestseller</div>
-      </div>
-      <div class="product-info"><h4>Kanjivaram Silk Saree</h4><p class="product-material">Pure Silk · Red & Gold</p>
-        <div class="product-price"><span class="price-now">₹3,499</span><span class="price-old">₹5,999</span></div>
-        <div class="product-actions"><a href="product.html" class="btn-view">View</a><a href="cart.html" class="btn-addcart">Add to Cart</a></div>
-      </div>
-    </a>
-    <a href="product.html" class="product-card">
-      <div class="product-img">
-        <img src="11.jfif" alt="Banarasi Silk Saree"/>
-        <div class="product-badge" style="background:var(--gold-dk)">New</div>
-      </div>
-      <div class="product-info"><h4>Banarasi Silk Saree</h4><p class="product-material">Pure Silk · Royal Blue</p>
-        <div class="product-price"><span class="price-now">₹4,299</span><span class="price-old">₹7,000</span></div>
-        <div class="product-actions"><a href="product.html" class="btn-view">View</a><a href="cart.html" class="btn-addcart">Add to Cart</a></div>
-      </div>
-    </a>
-    <a href="product.html" class="product-card">
-      <div class="product-img">
-        <img src="14.jfif" alt="Chanderi Silk Saree"/>
-        <div class="product-badge">Sale</div>
-      </div>
-      <div class="product-info"><h4>Chanderi Silk Saree</h4><p class="product-material">Silk Cotton · Mint Green</p>
-        <div class="product-price"><span class="price-now">₹2,199</span><span class="price-old">₹3,500</span></div>
-        <div class="product-actions"><a href="product.html" class="btn-view">View</a><a href="cart.html" class="btn-addcart">Add to Cart</a></div>
-      </div>
-    </a>
-    <a href="product.html" class="product-card">
-      <div class="product-img">
-        <img src="15.jfif" alt="Mysore Silk Saree"/>
-        <div class="product-badge" style="background:#e91e63">Trending</div>
-      </div>
-      <div class="product-info"><h4>Mysore Silk Saree</h4><p class="product-material">Pure Silk · Lavender</p>
-        <div class="product-price"><span class="price-now">₹3,899</span><span class="price-old">₹6,500</span></div>
-        <div class="product-actions"><a href="product.html" class="btn-view">View</a><a href="cart.html" class="btn-addcart">Add to Cart</a></div>
-      </div>
-    </a>
-  </div>
+<!-- RESULTS COUNT -->
+<div style="padding:16px 80px;font-size:13px;color:var(--muted);background:var(--white);border-bottom:1px solid var(--cream-dk)">
+  Showing <strong id="results-count">0</strong> sarees
+</div>
+
+<!-- NO RESULTS -->
+<div class="no-results-msg" id="no-results">
+  <div class="icon">🧵</div>
+  <h3>No sarees found</h3>
+  <p>Try a different filter or search term like "silk", "cotton", "bridal", or "Kanjivaram".</p>
+</div>
+
+<!-- PRODUCT GRID -->
+<section class="section" style="padding-top:48px" id="collections-section">
+  <div class="product-grid" id="main-grid" style="grid-template-columns:repeat(4,1fr)"></div>
 </section>
 
-<!-- COTTON SAREES -->
-<section class="section" style="background:var(--cream)">
-  <div class="section-header">
-    <span class="section-label">Everyday Comfort</span>
-    <h2 class="section-title">Cotton <em>Sarees</em></h2>
-    <div class="divider"></div>
-  </div>
-  <div class="product-grid">
-    <a href="product.html" class="product-card">
-      <div class="product-img">
-        <img src="111.jfif" alt="Tant Cotton Saree"/>
-        <div class="product-badge">New</div>
-      </div>
-      <div class="product-info"><h4>Tant Cotton Saree</h4><p class="product-material">Pure Cotton · Mustard</p>
-        <div class="product-price"><span class="price-now">₹799</span><span class="price-old">₹1,299</span></div>
-        <div class="product-actions"><a href="product.html" class="btn-view">View</a><a href="cart.html" class="btn-addcart">Add to Cart</a></div>
-      </div>
-    </a>
-    <a href="product.html" class="product-card">
-      <div class="product-img">
-        <img src="112.jfif" alt="Handloom Cotton Saree"/>
-        <div class="product-badge">Bestseller</div>
-      </div>
-      <div class="product-info"><h4>Handloom Cotton Saree</h4><p class="product-material">Handloom · Indigo</p>
-        <div class="product-price"><span class="price-now">₹1,099</span><span class="price-old">₹1,800</span></div>
-        <div class="product-actions"><a href="product.html" class="btn-view">View</a><a href="cart.html" class="btn-addcart">Add to Cart</a></div>
-      </div>
-    </a>
-    <a href="product.html" class="product-card">
-      <div class="product-img">
-        <img src="113.jfif" alt="Ikat Cotton Saree"/>
-        <div class="product-badge">Sale</div>
-      </div>
-      <div class="product-info"><h4>Ikat Cotton Saree</h4><p class="product-material">Cotton Ikat · Brick Red</p>
-        <div class="product-price"><span class="price-now">₹1,299</span><span class="price-old">₹2,200</span></div>
-        <div class="product-actions"><a href="product.html" class="btn-view">View</a><a href="cart.html" class="btn-addcart">Add to Cart</a></div>
-      </div>
-    </a>
-    <a href="product.html" class="product-card">
-      <div class="product-img">
-        <img src="114.jfif" alt="Jamdani Cotton Saree"/>
-        <div class="product-badge" style="background:var(--gold-dk)">Popular</div>
-      </div>
-      <div class="product-info"><h4>Jamdani Cotton Saree</h4><p class="product-material">Fine Cotton · Teal Green</p>
-        <div class="product-price"><span class="price-now">₹1,599</span><span class="price-old">₹2,500</span></div>
-        <div class="product-actions"><a href="product.html" class="btn-view">View</a><a href="cart.html" class="btn-addcart">Add to Cart</a></div>
-      </div>
-    </a>
-  </div>
-</section>
-
-<!-- BRIDAL SAREES -->
-<section class="section">
-  <div class="section-header">
-    <span class="section-label">For Your Special Day</span>
-    <h2 class="section-title">Bridal <em>Sarees</em></h2>
-    <div class="divider"></div>
-  </div>
-  <div class="product-grid">
-    <a href="product.html" class="product-card">
-      <div class="product-img">
-        <img src="115.jfif" alt="Bridal Kanjivaram"/>
-        <div class="product-badge">Bridal</div>
-      </div>
-      <div class="product-info"><h4>Bridal Kanjivaram</h4><p class="product-material">Pure Silk · Bridal Red</p>
-        <div class="product-price"><span class="price-now">₹14,999</span><span class="price-old">₹22,000</span></div>
-        <div class="product-actions"><a href="product.html" class="btn-view">View</a><a href="cart.html" class="btn-addcart">Add to Cart</a></div>
-      </div>
-    </a>
-    <a href="product.html" class="product-card">
-      <div class="product-img">
-        <img src="116.jfif" alt="Zari Banarasi Bridal"/>
-        <div class="product-badge">Premium</div>
-      </div>
-      <div class="product-info"><h4>Zari Banarasi Bridal</h4><p class="product-material">Pure Silk · Gold & Ivory</p>
-        <div class="product-price"><span class="price-now">₹18,499</span><span class="price-old">₹28,000</span></div>
-        <div class="product-actions"><a href="product.html" class="btn-view">View</a><a href="cart.html" class="btn-addcart">Add to Cart</a></div>
-      </div>
-    </a>
-    <a href="product.html" class="product-card">
-      <div class="product-img">
-        <img src="117.jfif" alt="Patola Bridal Saree"/>
-        <div class="product-badge" style="background:#e91e63">New</div>
-      </div>
-      <div class="product-info"><h4>Patola Bridal Saree</h4><p class="product-material">Patola Silk · Wine Purple</p>
-        <div class="product-price"><span class="price-now">₹11,999</span><span class="price-old">₹18,500</span></div>
-        <div class="product-actions"><a href="product.html" class="btn-view">View</a><a href="cart.html" class="btn-addcart">Add to Cart</a></div>
-      </div>
-    </a>
-    <a href="product.html" class="product-card">
-      <div class="product-img">
-        <img src="118.jfif" alt="Stone Embroidered Saree"/>
-        <div class="product-badge">Exclusive</div>
-      </div>
-      <div class="product-info"><h4>Stone Embroidered Saree</h4><p class="product-material">Georgette · Sapphire Blue</p>
-        <div class="product-price"><span class="price-now">₹8,999</span><span class="price-old">₹14,000</span></div>
-        <div class="product-actions"><a href="product.html" class="btn-view">View</a><a href="cart.html" class="btn-addcart">Add to Cart</a></div>
-      </div>
-    </a>
-  </div>
-  <div class="section-cta"><a href="product.html" class="btn-primary">Explore All Products</a></div>
-</section>
-
+<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-top">
     <div class="footer-brand">
-      <div class="logo"><span class="logo-icon">✦</span>
-        <div class="logo-text"><span class="logo-main" style="color:var(--gold-lt)">Saree Palace</span><span class="logo-sub">Est. 1987 · Handcrafted Elegance</span></div>
+      <a href="index.html" class="logo">
+        <div class="logo-icon">✦</div>
+        <div class="logo-text">
+          <span class="logo-main" style="color:var(--gold-lt)">Saree Palace</span>
+          <span class="logo-sub">Est. 1987 · Handcrafted Elegance</span>
+        </div>
+      </a>
+      <p>Your most trusted destination for authentic Indian ethnic wear. Visit us at Hampankatta, Mangalore or shop online 24/7.</p>
+      <div class="footer-social-icons">
+        <a href="https://wa.me/919876543210" target="_blank" class="footer-social-btn">💬</a>
+        <a href="https://www.instagram.com/" target="_blank" class="footer-social-btn">📸</a>
+        <a href="https://www.facebook.com/" target="_blank" class="footer-social-btn">📘</a>
+        <a href="https://www.youtube.com/" target="_blank" class="footer-social-btn">▶️</a>
       </div>
-      <p>Your trusted destination for authentic Indian ethnic wear.</p>
-      <div class="footer-social"><div class="social-icon">📘</div><div class="social-icon">📸</div><div class="social-icon">💬</div><div class="social-icon">▶️</div></div>
     </div>
-    <div class="footer-col"><h5>Quick Links</h5><a href="index.html">Home</a><a href="collections.html">Collections</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></div>
-    <div class="footer-col"><h5>Categories</h5><a href="collections.html">Silk Sarees</a><a href="collections.html">Cotton Sarees</a><a href="collections.html">Bridal Sarees</a></div>
-    <div class="footer-col"><h5>Help</h5><a href="contact.html">Track Order</a><a href="contact.html">Returns</a><a href="contact.html">FAQ</a></div>
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h5>Categories</h5>
+      <a href="collections.html?cat=silk">Silk Sarees</a>
+      <a href="collections.html?cat=cotton">Cotton Sarees</a>
+      <a href="collections.html?cat=bridal">Bridal Sarees</a>
+      <a href="collections.html?cat=designer">Designer Sarees</a>
+      <a href="collections.html?cat=party">Party Wear</a>
+    </div>
+    <div class="footer-col">
+      <h5>Help</h5>
+      <a href="contact.html">Track Order</a>
+      <a href="contact.html">Returns</a>
+      <a href="contact.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </div>
-  <div class="footer-bottom"><p>© 2025 Saree Palace. All rights reserved.</p><p><a href="#">Privacy Policy</a></p></div>
+  <div class="footer-divider"></div>
+  <div class="footer-bottom">
+    <p>© 2025 Saree Palace, Hampankatta, Mangalore. All rights reserved.</p>
+    <p><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></p>
+  </div>
 </footer>
-<script>
-  document.querySelectorAll('.filter-chip').forEach(chip => {
-    chip.addEventListener('click', function() {
-      this.closest('.filter-chips').querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
-      this.classList.add('active');
-    });
-  });
-</script>
+
+<div class="floating-social">
+  <a href="https://wa.me/919876543210" target="_blank" class="float-btn float-whatsapp">💬</a>
+  <a href="https://www.instagram.com/" target="_blank" class="float-btn float-instagram">📸</a>
+  <button class="float-btn float-back-top" id="back-top">↑</button>
+</div>
+
 <script src="script.js"></script>
+<script>
+  let activeFilter = 'all';
+  let activeSearch = '';
+  let sortMode = 'default';
+
+  // Check URL param
+  const urlCat = new URLSearchParams(window.location.search).get('cat');
+  if (urlCat) activeFilter = urlCat;
+
+  function getDiscount(p) { return Math.round((1 - p.price / p.oldPrice) * 100); }
+
+  function getFilteredProducts() {
+    let list = [...PRODUCTS];
+
+    // Category filter
+    if (activeFilter === 'under1499') list = list.filter(p => p.price < 1499);
+    else if (activeFilter === 'under2999') list = list.filter(p => p.price < 2999);
+    else if (activeFilter !== 'all') list = list.filter(p => p.category === activeFilter);
+
+    // Search
+    if (activeSearch) {
+      const q = activeSearch.toLowerCase();
+      list = list.filter(p =>
+        p.name.toLowerCase().includes(q) ||
+        p.material.toLowerCase().includes(q) ||
+        p.category.toLowerCase().includes(q) ||
+        p.badge.toLowerCase().includes(q)
+      );
+    }
+
+    // Sort
+    if (sortMode === 'low-high') list.sort((a, b) => a.price - b.price);
+    else if (sortMode === 'high-low') list.sort((a, b) => b.price - a.price);
+    else if (sortMode === 'discount') list.sort((a, b) => getDiscount(b) - getDiscount(a));
+
+    return list;
+  }
+
+  function renderGrid() {
+    const grid = document.getElementById('main-grid');
+    const noRes = document.getElementById('no-results');
+    const count = document.getElementById('results-count');
+    const products = getFilteredProducts();
+
+    count.textContent = products.length;
+
+    if (products.length === 0) {
+      grid.innerHTML = '';
+      noRes.classList.add('show');
+      return;
+    }
+    noRes.classList.remove('show');
+
+    grid.innerHTML = products.map(p => {
+      const discount = getDiscount(p);
+      return `
+        <div class="product-card" onclick="window.location.href='product.html?id=${p.id}'">
+          <div class="product-img">
+            <img src="${p.img}" alt="${p.name}" loading="lazy"/>
+            <div class="product-badge">${p.badge}</div>
+            <div class="product-wishlist" onclick="event.stopPropagation();this.textContent=this.textContent==='♡'?'♥':'♡'">♡</div>
+          </div>
+          <div class="product-info">
+            <h4>${p.name}</h4>
+            <p class="product-material">${p.material}</p>
+            <div class="product-price">
+              <span class="price-now">₹${p.price.toLocaleString('en-IN')}</span>
+              <span class="price-old">₹${p.oldPrice.toLocaleString('en-IN')}</span>
+              <span class="price-off">${discount}% off</span>
+            </div>
+            <div class="product-actions">
+              <a href="product.html?id=${p.id}" class="btn-view" onclick="event.stopPropagation()">View</a>
+              <button class="btn-addcart" onclick="event.stopPropagation();addToCart(${p.id})">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function setFilter(filter) {
+    activeFilter = filter;
+    // Update chips
+    document.querySelectorAll('.filter-chip').forEach(c => c.classList.toggle('active', c.dataset.filter === filter));
+    document.querySelectorAll('.cat-nav-link').forEach(c => c.classList.toggle('active', c.dataset.filter === filter));
+    renderGrid();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Chips
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.addEventListener('click', () => setFilter(chip.dataset.filter));
+  });
+
+  // Cat nav
+  document.querySelectorAll('.cat-nav-link').forEach(link => {
+    link.addEventListener('click', e => { e.preventDefault(); setFilter(link.dataset.filter); });
+  });
+
+  // Sort
+  document.getElementById('sort-select').addEventListener('change', function () {
+    sortMode = this.value;
+    renderGrid();
+  });
+
+  // Search inside collections
+  const searchEl = document.getElementById('search-input');
+  searchEl.addEventListener('input', function () {
+    activeSearch = this.value.trim();
+    if (activeSearch) {
+      activeFilter = 'all';
+      document.querySelectorAll('.filter-chip').forEach(c => c.classList.toggle('active', c.dataset.filter === 'all'));
+      document.querySelectorAll('.cat-nav-link').forEach(c => c.classList.toggle('active', c.dataset.filter === 'all'));
+    }
+    renderGrid();
+  });
+
+  // Init
+  if (urlCat) {
+    document.querySelectorAll('.filter-chip').forEach(c => c.classList.toggle('active', c.dataset.filter === urlCat));
+    document.querySelectorAll('.cat-nav-link').forEach(c => c.classList.toggle('active', c.dataset.filter === urlCat));
+  }
+  renderGrid();
+</script>
 </body>
 </html>
