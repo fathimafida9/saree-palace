@@ -7,38 +7,73 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
-<div class="announcement-bar">
-  <span>✦ Free Shipping on orders above ₹1499 &nbsp;&nbsp;&nbsp; ✦ Use code PALACE10 for 10% off &nbsp;&nbsp;&nbsp; ✦ New Arrivals Every Week!</span>
+<!-- MOBILE NAV -->
+<div class="mnav" id="mnav">
+  <div class="mnav-bg" id="mnav-bg"></div>
+  <div class="mnav-drawer">
+    <div class="mnav-hdr">
+      <a href="index.html" class="logo">
+        <div class="logo-icon" style="width:30px;height:30px;font-size:13px">✦</div>
+        <div class="logo-text"><span class="logo-main">Saree Palace</span><span class="logo-sub">Est. 1987</span></div>
+      </a>
+      <button class="mnav-close" id="mnav-close">✕</button>
+    </div>
+    <div class="mnav-search">
+      <span class="si">🔍</span>
+      <input type="text" id="m-search" placeholder="Search sarees…"/>
+      <div class="srp mnav-srp" id="m-srp"></div>
+    </div>
+    <nav class="mnav-links">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="product.html">Products</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">🛍 My Cart</a>
+    </nav>
+    <div class="mnav-cats">
+      <h6>Shop by Category</h6>
+      <div class="mnav-cat-grid">
+        <a href="collections.html?cat=silk" class="mnav-cat-btn"><span class="cat-dot" style="background:#c9973a"></span>Silk</a>
+        <a href="collections.html?cat=cotton" class="mnav-cat-btn"><span class="cat-dot" style="background:#8B4513"></span>Cotton</a>
+        <a href="collections.html?cat=bridal" class="mnav-cat-btn"><span class="cat-dot" style="background:#c0392b"></span>Bridal</a>
+        <a href="collections.html?cat=designer" class="mnav-cat-btn"><span class="cat-dot" style="background:#8e44ad"></span>Designer</a>
+        <a href="collections.html?cat=party" class="mnav-cat-btn"><span class="cat-dot" style="background:#e91e63"></span>Party Wear</a>
+        <a href="collections.html" class="mnav-cat-btn">✦ All</a>
+      </div>
+    </div>
+    <div class="mnav-foot">
+      <a href="https://wa.me/919876543210" target="_blank" class="mnav-wa">💬 WhatsApp</a>
+      <a href="https://www.instagram.com/" target="_blank" class="mnav-ig">📸 Instagram</a>
+    </div>
+  </div>
 </div>
-
+<div class="ann-bar"><span>✦ Free Shipping above ₹1499 &nbsp;&nbsp; ✦ Code PALACE10 for 10% off &nbsp;&nbsp; ✦ New Arrivals Every Week! &nbsp;&nbsp; ✦ Authentic Handloom &amp; Silk since 1987</span></div>
 <header class="header">
   <div class="header-top">
     <a href="index.html" class="logo">
       <div class="logo-icon">✦</div>
-      <div class="logo-text">
-        <span class="logo-main">Saree Palace</span>
-        <span class="logo-sub">Est. 1987 · Handcrafted Elegance</span>
-      </div>
+      <div class="logo-text"><span class="logo-main">Saree Palace</span><span class="logo-sub">Est. 1987 · Handcrafted Elegance</span></div>
     </a>
-    <nav class="header-nav">
-      <a href="index.html">Home</a>
-      <a href="collections.html">Collections</a>
+    <nav class="hdr-nav">
+      <a href="index.html" >Home</a>
+      <a href="collections.html" >Collections</a>
       <a href="product.html" class="active">Products</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
+      <a href="about.html" >About Us</a>
+      <a href="contact.html" >Contact</a>
     </nav>
-    <div class="header-actions">
-      <div class="search-wrapper">
-        <span class="search-icon">🔍</span>
-        <input type="text" id="search-input" placeholder="Search sarees…"/>
-        <div class="search-results-panel" id="search-panel"></div>
+    <div class="hdr-actions">
+      <div class="search-wrap">
+        <span class="si">🔍</span>
+        <input type="text" id="d-search" placeholder="Search sarees…"/>
+        <div class="srp" id="d-srp"></div>
       </div>
       <a href="cart.html" class="btn-cart">🛍 Cart (<span class="cart-count">0</span>)</a>
+      <button class="hamburger" id="ham-btn"><span></span><span></span><span></span></button>
     </div>
   </div>
-  <nav class="category-nav">
-    <a href="collections.html?cat=all"><span class="cat-dot" style="background:var(--gold)"></span>All</a>
+  <nav class="cat-nav">
+    <a href="collections.html"><span class="cat-dot" style="background:var(--gold)"></span>All</a>
     <a href="collections.html?cat=silk"><span class="cat-dot" style="background:#c9973a"></span>Silk Sarees</a>
     <a href="collections.html?cat=cotton"><span class="cat-dot" style="background:#8B4513"></span>Cotton Sarees</a>
     <a href="collections.html?cat=bridal"><span class="cat-dot" style="background:#c0392b"></span>Bridal Sarees</a>
@@ -47,210 +82,119 @@
   </nav>
 </header>
 
-<div id="product-detail-area"></div>
-
-<!-- RELATED PRODUCTS -->
-<section class="section bg-cream">
-  <div class="section-header">
-    <span class="section-label">You May Also Like</span>
-    <h2 class="section-title">Related <em>Sarees</em></h2>
-    <div class="divider"></div>
-  </div>
-  <div class="product-grid" id="related-grid"></div>
+<section class="pd-wrap" id="pd-area"></section>
+<section class="sec bg-cream">
+  <div class="sec-hdr"><span class="sec-lbl">You May Also Like</span><h2 class="sec-title">Related <em>Sarees</em></h2><div class="divider"></div></div>
+  <div class="prod-grid" id="rel-grid"></div>
 </section>
 
 <footer class="footer">
-  <div class="footer-top">
-    <div class="footer-brand">
-      <a href="index.html" class="logo">
-        <div class="logo-icon">✦</div>
-        <div class="logo-text">
-          <span class="logo-main" style="color:var(--gold-lt)">Saree Palace</span>
-          <span class="logo-sub">Est. 1987 · Handcrafted Elegance</span>
-        </div>
-      </a>
-      <p>Your most trusted destination for authentic Indian ethnic wear.</p>
-      <div class="footer-social-icons">
-        <a href="https://wa.me/919876543210" target="_blank" class="footer-social-btn">💬</a>
-        <a href="https://www.instagram.com/" target="_blank" class="footer-social-btn">📸</a>
-        <a href="https://www.facebook.com/" target="_blank" class="footer-social-btn">📘</a>
-        <a href="https://www.youtube.com/" target="_blank" class="footer-social-btn">▶️</a>
+  <div class="foot-top">
+    <div class="foot-brand">
+      <a href="index.html" class="logo"><div class="logo-icon">✦</div><div class="logo-text"><span class="logo-main" style="color:var(--gold-lt)">Saree Palace</span><span class="logo-sub">Est. 1987 · Handcrafted Elegance</span></div></a>
+      <p>Your most trusted destination for authentic Indian ethnic wear. Visit us at Hampankatta, Mangalore.</p>
+      <div class="foot-social">
+        <a href="https://wa.me/919876543210" target="_blank" class="foot-soc-btn">💬</a>
+        <a href="https://www.instagram.com/" target="_blank" class="foot-soc-btn">📸</a>
+        <a href="https://www.facebook.com/" target="_blank" class="foot-soc-btn">📘</a>
+        <a href="https://www.youtube.com/" target="_blank" class="foot-soc-btn">▶️</a>
       </div>
     </div>
-    <div class="footer-col">
-      <h5>Quick Links</h5>
-      <a href="index.html">Home</a>
-      <a href="collections.html">Collections</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="footer-col">
-      <h5>Categories</h5>
-      <a href="collections.html?cat=silk">Silk Sarees</a>
-      <a href="collections.html?cat=cotton">Cotton Sarees</a>
-      <a href="collections.html?cat=bridal">Bridal Sarees</a>
-    </div>
-    <div class="footer-col">
-      <h5>Help</h5>
-      <a href="contact.html">Track Order</a>
-      <a href="contact.html">Returns</a>
-      <a href="contact.html">FAQ</a>
-    </div>
+    <div class="foot-col"><h5>Quick Links</h5><a href="index.html">Home</a><a href="collections.html">Collections</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></div>
+    <div class="foot-col"><h5>Categories</h5><a href="collections.html?cat=silk">Silk Sarees</a><a href="collections.html?cat=cotton">Cotton Sarees</a><a href="collections.html?cat=bridal">Bridal Sarees</a><a href="collections.html?cat=designer">Designer</a></div>
+    <div class="foot-col"><h5>Help</h5><a href="contact.html">Track Order</a><a href="contact.html">Returns</a><a href="contact.html">FAQ</a><a href="contact.html">Contact</a></div>
   </div>
-  <div class="footer-divider"></div>
-  <div class="footer-bottom">
+  <div class="foot-div"></div>
+  <div class="foot-bot">
     <p>© 2025 Saree Palace, Hampankatta, Mangalore. All rights reserved.</p>
     <p><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></p>
   </div>
 </footer>
-
-<div class="floating-social">
-  <a href="https://wa.me/919876543210" target="_blank" class="float-btn float-whatsapp">💬</a>
-  <a href="https://www.instagram.com/" target="_blank" class="float-btn float-instagram">📸</a>
-  <button class="float-btn float-back-top" id="back-top">↑</button>
+<div class="float-wrap">
+  <a href="https://wa.me/919876543210" target="_blank" class="fl-btn fl-wa">💬</a>
+  <a href="https://www.instagram.com/" target="_blank" class="fl-btn fl-ig">📸</a>
+  <button class="fl-btn fl-top" id="back-top">↑</button>
 </div>
-
 <script src="script.js"></script>
 <script>
-  let qty = 1;
-
-  function loadProduct() {
-    const id = parseInt(new URLSearchParams(window.location.search).get('id')) || 1;
-    const p = PRODUCTS.find(x => x.id === id) || PRODUCTS[0];
-    const discount = Math.round((1 - p.price / p.oldPrice) * 100);
-
-    document.title = p.name + ' – Saree Palace';
-
-    const area = document.getElementById('product-detail-area');
-    area.innerHTML = `
-      <div class="product-detail">
-        <div class="product-gallery">
-          <div class="product-main-img">
-            <img src="${p.img}" alt="${p.name}" id="main-img"/>
-          </div>
-          <div class="product-thumbs">
-            ${[p.img, p.img, p.img, p.img].map((img, i) => `
-              <div class="product-thumb ${i===0?'active':''}" onclick="switchImg(this,'${img}')">
-                <img src="${img}" alt="${p.name}" style="filter:${i===0?'none':'brightness(0.7)'}"/>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-        <div class="product-detail-info">
-          <div class="breadcrumb" style="justify-content:flex-start;margin-bottom:16px">
-            <a href="index.html" style="color:var(--light-muted)">Home</a><span>›</span>
-            <a href="collections.html?cat=${p.category}" style="color:var(--light-muted)">${p.category.charAt(0).toUpperCase()+p.category.slice(1)} Sarees</a><span>›</span>
-            <span>${p.name}</span>
-          </div>
-          <span style="background:var(--burgundy);color:var(--gold-lt);font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:4px 12px;border-radius:2px">${p.badge}</span>
-          <h1 style="margin:12px 0 6px">${p.name}</h1>
-          <p class="product-material" style="font-size:15px">${p.material}</p>
-          <div class="product-rating">
-            <span class="stars">★★★★★</span>
-            <span class="rating-count">4.9 (238 reviews)</span>
-          </div>
-          <div class="product-detail-price">
-            <div class="product-price">
-              <span class="price-now">₹${p.price.toLocaleString('en-IN')}</span>
-              <span class="price-old">₹${p.oldPrice.toLocaleString('en-IN')}</span>
-              <span class="price-off">${discount}% off</span>
-            </div>
-            <p style="font-size:13px;color:var(--light-muted);margin-top:4px">Inclusive of all taxes. Free shipping.</p>
-          </div>
-
-          <div class="product-options">
-            <div class="option-label">Select Blouse Size</div>
-            <div class="option-swatches">
-              <span class="swatch active">XS</span>
-              <span class="swatch">S</span>
-              <span class="swatch">M</span>
-              <span class="swatch">L</span>
-              <span class="swatch">XL</span>
-              <span class="swatch">Without Blouse</span>
-            </div>
-          </div>
-
-          <div class="option-label" style="margin-bottom:10px">Quantity</div>
-          <div class="qty-control">
-            <button class="qty-btn" onclick="changeQtyUI(-1)">−</button>
-            <span class="qty-num" id="qty-display">1</span>
-            <button class="qty-btn" onclick="changeQtyUI(1)">+</button>
-          </div>
-
-          <div class="product-cta">
-            <button class="btn-primary-lg" onclick="addToCart(${p.id});showToast('✦ Added to cart!')">🛍 Add to Cart</button>
-            <button class="btn-outline-lg" onclick="showToast('✦ Proceeding to checkout…')">Buy Now</button>
-          </div>
-
-          <div style="margin-top:24px;padding:20px;background:var(--cream);border-radius:10px;border-left:3px solid var(--gold)">
-            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;font-size:13px;color:var(--muted)">
-              💬 <a href="https://wa.me/919876543210?text=Hi, I'm interested in the ${encodeURIComponent(p.name)}" target="_blank" style="color:var(--burgundy);font-weight:600">Ask about this saree on WhatsApp</a>
-            </div>
-            <div style="font-size:12px;color:var(--light-muted)">Get instant replies from our saree experts · Mon–Sun, 9 AM – 9 PM</div>
-          </div>
-
-          <div style="margin-top:24px;display:flex;flex-direction:column;gap:10px">
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)"><span>🚚</span> Free delivery on this order · Estimated 3–5 business days</div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)"><span>🔄</span> Easy 7-day returns · No questions asked</div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)"><span>🧵</span> Authenticity guaranteed · Silk Mark certified</div>
-          </div>
-        </div>
+(function(){
+  var h=document.getElementById('ham-btn'),n=document.getElementById('mnav'),c=document.getElementById('mnav-close'),b=document.getElementById('mnav-bg');
+  function open(){n.classList.add('open');document.body.style.overflow='hidden';h&&h.classList.add('open');}
+  function close(){n.classList.remove('open');document.body.style.overflow='';h&&h.classList.remove('open');}
+  if(h)h.addEventListener('click',open);
+  if(c)c.addEventListener('click',close);
+  if(b)b.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+<script>
+let qty=1;
+function load(){
+  const id=parseInt(new URLSearchParams(location.search).get('id'))||1;
+  const p=PRODUCTS.find(x=>x.id===id)||PRODUCTS[0];
+  document.title=p.name+' – Saree Palace';
+  const d=Math.round((1-p.price/p.oldPrice)*100);
+  document.getElementById('pd-area').innerHTML=`
+    <div class="pd-gallery">
+      <div class="pd-main"><img src="${p.img}" alt="${p.name}" id="pd-img"/></div>
+      <div class="pd-thumbs">
+        ${[0,1,2,3].map(i=>`<div class="pd-thumb${i===0?' active':''}" onclick="swImg(this,'${p.img}')"><img src="${p.img}" alt="${p.name}" style="filter:${i===0?'none':'brightness(.7)'}"/></div>`).join('')}
       </div>
-    `;
-
-    // Swatch toggle
-    document.querySelectorAll('.swatch').forEach(s => {
-      s.addEventListener('click', function () {
-        document.querySelectorAll('.swatch').forEach(x => x.classList.remove('active'));
-        this.classList.add('active');
-      });
-    });
-
-    // Related products
-    const related = PRODUCTS.filter(x => x.category === p.category && x.id !== p.id).slice(0, 4);
-    const relGrid = document.getElementById('related-grid');
-    relGrid.innerHTML = related.map(rp => {
-      const d = Math.round((1 - rp.price / rp.oldPrice) * 100);
-      return `
-        <div class="product-card" onclick="window.location.href='product.html?id=${rp.id}'">
-          <div class="product-img">
-            <img src="${rp.img}" alt="${rp.name}" loading="lazy"/>
-            <div class="product-badge">${rp.badge}</div>
-          </div>
-          <div class="product-info">
-            <h4>${rp.name}</h4>
-            <p class="product-material">${rp.material}</p>
-            <div class="product-price">
-              <span class="price-now">₹${rp.price.toLocaleString('en-IN')}</span>
-              <span class="price-old">₹${rp.oldPrice.toLocaleString('en-IN')}</span>
-              <span class="price-off">${d}% off</span>
-            </div>
-            <div class="product-actions">
-              <a href="product.html?id=${rp.id}" class="btn-view" onclick="event.stopPropagation()">View</a>
-              <button class="btn-addcart" onclick="event.stopPropagation();addToCart(${rp.id})">Add to Cart</button>
-            </div>
-          </div>
-        </div>
-      `;
-    }).join('');
-  }
-
-  function switchImg(thumb, src) {
-    document.getElementById('main-img').src = src;
-    document.querySelectorAll('.product-thumb').forEach(t => {
-      t.classList.remove('active');
-      t.querySelector('img').style.filter = 'brightness(0.7)';
-    });
-    thumb.classList.add('active');
-    thumb.querySelector('img').style.filter = 'none';
-  }
-
-  function changeQtyUI(delta) {
-    qty = Math.max(1, qty + delta);
-    document.getElementById('qty-display').textContent = qty;
-  }
-
-  loadProduct();
+    </div>
+    <div class="pd-info">
+      <div class="breadcrumb" style="justify-content:flex-start;margin-bottom:12px">
+        <a href="index.html" style="color:var(--lt-muted)">Home</a><span>›</span>
+        <a href="collections.html?cat=${p.category}" style="color:var(--lt-muted)">${p.category.charAt(0).toUpperCase()+p.category.slice(1)}</a><span>›</span>
+        <span>${p.name}</span>
+      </div>
+      <span class="prod-badge" style="position:static;display:inline-block;margin-bottom:10px">${p.badge}</span>
+      <h1 class="pd-title">${p.name}</h1>
+      <div class="prod-mat" style="font-size:14px;margin-bottom:14px">${p.material}</div>
+      <div class="pd-rating"><span class="stars">★★★★★</span><span class="rc">4.9 (238 reviews)</span></div>
+      <div class="pd-price">
+        <div class="prod-price"><span class="p-now">₹${p.price.toLocaleString('en-IN')}</span><span class="p-old">₹${p.oldPrice.toLocaleString('en-IN')}</span><span class="p-off">${d}% off</span></div>
+        <p>Inclusive of all taxes · Free shipping</p>
+      </div>
+      <div class="opt-lbl">Blouse Size</div>
+      <div class="swatches" id="sw">
+        <span class="swatch active">XS</span><span class="swatch">S</span><span class="swatch">M</span><span class="swatch">L</span><span class="swatch">XL</span><span class="swatch">Without Blouse</span>
+      </div>
+      <div class="opt-lbl">Quantity</div>
+      <div class="qty-row">
+        <button class="qty-btn" onclick="cq(-1)">−</button>
+        <span class="qty-num" id="qn">1</span>
+        <button class="qty-btn" onclick="cq(1)">+</button>
+      </div>
+      <div class="pd-cta">
+        <button class="btn-buy" onclick="addToCart(${p.id})">🛍 Add to Cart</button>
+        <button class="btn-out2" onclick="showToast('✦ Proceeding to checkout…')">Buy Now</button>
+      </div>
+      <div class="pd-wa-box">
+        <div style="font-size:13px;color:var(--muted)">💬 <a href="https://wa.me/919876543210?text=Hi, I'm interested in the ${encodeURIComponent(p.name)}" target="_blank">Ask about this saree on WhatsApp</a></div>
+        <div style="font-size:11px;color:var(--lt-muted);margin-top:3px">Instant replies · Mon–Sun, 9 AM – 9 PM</div>
+      </div>
+      <div class="pd-features">
+        <div class="pd-feat">🚚 Free delivery · Estimated 3–5 business days</div>
+        <div class="pd-feat">🔄 Easy 7-day returns · No questions asked</div>
+        <div class="pd-feat">🧵 Authenticity guaranteed · Silk Mark certified</div>
+      </div>
+    </div>`;
+  document.querySelectorAll('#sw .swatch').forEach(s=>s.addEventListener('click',function(){document.querySelectorAll('#sw .swatch').forEach(x=>x.classList.remove('active'));this.classList.add('active');}));
+  // Related
+  const rel=PRODUCTS.filter(x=>x.category===p.category&&x.id!==p.id).slice(0,4);
+  document.getElementById('rel-grid').innerHTML=rel.map(r=>{
+    const rd=Math.round((1-r.price/r.oldPrice)*100);
+    return`<div class="prod-card" onclick="location.href='product.html?id=${r.id}'">
+      <div class="prod-img"><img src="${r.img}" alt="${r.name}" loading="lazy"/><div class="prod-badge">${r.badge}</div></div>
+      <div class="prod-info">
+        <div class="prod-name">${r.name}</div><div class="prod-mat">${r.material}</div>
+        <div class="prod-price"><span class="p-now">₹${r.price.toLocaleString('en-IN')}</span><span class="p-old">₹${r.oldPrice.toLocaleString('en-IN')}</span><span class="p-off">${rd}% off</span></div>
+        <div class="prod-acts"><a href="product.html?id=${r.id}" class="btn-view" onclick="event.stopPropagation()">View</a><button class="btn-ac" onclick="event.stopPropagation();addToCart(${r.id})">Add to Cart</button></div>
+      </div></div>`;}).join('');
+}
+function swImg(el,src){document.getElementById('pd-img').src=src;document.querySelectorAll('.pd-thumb').forEach(t=>{t.classList.remove('active');t.querySelector('img').style.filter='brightness(.7)';});el.classList.add('active');el.querySelector('img').style.filter='none';}
+function cq(d){qty=Math.max(1,qty+d);document.getElementById('qn').textContent=qty;}
+load();
 </script>
 </body>
 </html>

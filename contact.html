@@ -7,38 +7,73 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
-<div class="announcement-bar">
-  <span>✦ Free Shipping on orders above ₹1499 &nbsp;&nbsp;&nbsp; ✦ Use code PALACE10 for 10% off &nbsp;&nbsp;&nbsp; ✦ New Arrivals Every Week!</span>
-</div>
-
-<header class="header">
-  <div class="header-top">
-    <a href="index.html" class="logo">
-      <div class="logo-icon">✦</div>
-      <div class="logo-text">
-        <span class="logo-main">Saree Palace</span>
-        <span class="logo-sub">Est. 1987 · Handcrafted Elegance</span>
-      </div>
-    </a>
-    <nav class="header-nav">
+<!-- MOBILE NAV -->
+<div class="mnav" id="mnav">
+  <div class="mnav-bg" id="mnav-bg"></div>
+  <div class="mnav-drawer">
+    <div class="mnav-hdr">
+      <a href="index.html" class="logo">
+        <div class="logo-icon" style="width:30px;height:30px;font-size:13px">✦</div>
+        <div class="logo-text"><span class="logo-main">Saree Palace</span><span class="logo-sub">Est. 1987</span></div>
+      </a>
+      <button class="mnav-close" id="mnav-close">✕</button>
+    </div>
+    <div class="mnav-search">
+      <span class="si">🔍</span>
+      <input type="text" id="m-search" placeholder="Search sarees…"/>
+      <div class="srp mnav-srp" id="m-srp"></div>
+    </div>
+    <nav class="mnav-links">
       <a href="index.html">Home</a>
       <a href="collections.html">Collections</a>
       <a href="product.html">Products</a>
       <a href="about.html">About Us</a>
-      <a href="contact.html" class="active">Contact</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">🛍 My Cart</a>
     </nav>
-    <div class="header-actions">
-      <div class="search-wrapper">
-        <span class="search-icon">🔍</span>
-        <input type="text" id="search-input" placeholder="Search sarees…"/>
-        <div class="search-results-panel" id="search-panel"></div>
+    <div class="mnav-cats">
+      <h6>Shop by Category</h6>
+      <div class="mnav-cat-grid">
+        <a href="collections.html?cat=silk" class="mnav-cat-btn"><span class="cat-dot" style="background:#c9973a"></span>Silk</a>
+        <a href="collections.html?cat=cotton" class="mnav-cat-btn"><span class="cat-dot" style="background:#8B4513"></span>Cotton</a>
+        <a href="collections.html?cat=bridal" class="mnav-cat-btn"><span class="cat-dot" style="background:#c0392b"></span>Bridal</a>
+        <a href="collections.html?cat=designer" class="mnav-cat-btn"><span class="cat-dot" style="background:#8e44ad"></span>Designer</a>
+        <a href="collections.html?cat=party" class="mnav-cat-btn"><span class="cat-dot" style="background:#e91e63"></span>Party Wear</a>
+        <a href="collections.html" class="mnav-cat-btn">✦ All</a>
       </div>
-      <a href="cart.html" class="btn-cart">🛍 Cart (<span class="cart-count">0</span>)</a>
+    </div>
+    <div class="mnav-foot">
+      <a href="https://wa.me/919876543210" target="_blank" class="mnav-wa">💬 WhatsApp</a>
+      <a href="https://www.instagram.com/" target="_blank" class="mnav-ig">📸 Instagram</a>
     </div>
   </div>
-  <nav class="category-nav">
-    <a href="collections.html?cat=all"><span class="cat-dot" style="background:var(--gold)"></span>All</a>
+</div>
+<div class="ann-bar"><span>✦ Free Shipping above ₹1499 &nbsp;&nbsp; ✦ Code PALACE10 for 10% off &nbsp;&nbsp; ✦ New Arrivals Every Week! &nbsp;&nbsp; ✦ Authentic Handloom &amp; Silk since 1987</span></div>
+<header class="header">
+  <div class="header-top">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">✦</div>
+      <div class="logo-text"><span class="logo-main">Saree Palace</span><span class="logo-sub">Est. 1987 · Handcrafted Elegance</span></div>
+    </a>
+    <nav class="hdr-nav">
+      <a href="index.html" >Home</a>
+      <a href="collections.html" >Collections</a>
+      <a href="product.html" >Products</a>
+      <a href="about.html" >About Us</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="hdr-actions">
+      <div class="search-wrap">
+        <span class="si">🔍</span>
+        <input type="text" id="d-search" placeholder="Search sarees…"/>
+        <div class="srp" id="d-srp"></div>
+      </div>
+      <a href="cart.html" class="btn-cart">🛍 Cart (<span class="cart-count">0</span>)</a>
+      <button class="hamburger" id="ham-btn"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="cat-nav">
+    <a href="collections.html"><span class="cat-dot" style="background:var(--gold)"></span>All</a>
     <a href="collections.html?cat=silk"><span class="cat-dot" style="background:#c9973a"></span>Silk Sarees</a>
     <a href="collections.html?cat=cotton"><span class="cat-dot" style="background:#8B4513"></span>Cotton Sarees</a>
     <a href="collections.html?cat=bridal"><span class="cat-dot" style="background:#c0392b"></span>Bridal Sarees</a>
@@ -47,213 +82,109 @@
   </nav>
 </header>
 
-<section class="page-hero">
-  <div class="breadcrumb"><a href="index.html">Home</a><span>›</span> Contact Us</div>
-  <h1>Get in <em style="font-style:italic;color:var(--gold-lt)">Touch</em></h1>
-  <p>We'd love to hear from you. Reach out via WhatsApp, email, or visit us at our Hampankatta store.</p>
-</section>
-
-<!-- QUICK SOCIAL BUTTONS -->
-<div style="display:flex;justify-content:center;gap:16px;padding:32px 40px;background:var(--cream);flex-wrap:wrap">
-  <a href="https://wa.me/919876543210" target="_blank"
-    style="display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;padding:14px 28px;border-radius:32px;font-size:14px;font-weight:600;text-decoration:none;transition:all 0.3s;box-shadow:0 4px 16px rgba(37,211,102,0.3)"
-    onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
-    💬 &nbsp;WhatsApp Us Now
-  </a>
-  <a href="https://www.instagram.com/" target="_blank"
-    style="display:flex;align-items:center;gap:10px;background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%);color:#fff;padding:14px 28px;border-radius:32px;font-size:14px;font-weight:600;text-decoration:none;transition:all 0.3s;box-shadow:0 4px 16px rgba(214,36,159,0.3)"
-    onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
-    📸 &nbsp;Follow on Instagram
-  </a>
-  <a href="tel:+919876543210"
-    style="display:flex;align-items:center;gap:10px;background:var(--burgundy);color:var(--gold-lt);padding:14px 28px;border-radius:32px;font-size:14px;font-weight:600;text-decoration:none;transition:all 0.3s"
-    onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
-    📞 &nbsp;Call Us
-  </a>
+<div class="pg-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a><span>›</span>Contact Us</div>
+  <h1>Get in <em>Touch</em></h1>
+  <p>Reach out via WhatsApp, email, or visit us at Hampankatta, Mangalore.</p>
 </div>
-
-<!-- CONTACT GRID -->
+<div class="quick-social">
+  <a href="https://wa.me/919876543210" target="_blank" class="quick-btn q-wa">💬 WhatsApp Us Now</a>
+  <a href="https://www.instagram.com/" target="_blank" class="quick-btn q-ig">📸 Follow on Instagram</a>
+  <a href="tel:+919876543210" class="quick-btn q-call">📞 Call Us</a>
+</div>
 <section class="contact-grid">
-  <!-- INFO CARD -->
-  <div class="contact-info-card">
+  <div class="contact-info">
     <h3>Contact Information</h3>
     <p>We're here to help! Reach us anytime during store hours.</p>
-
-    <div class="contact-detail">
-      <div class="contact-detail-icon">📍</div>
-      <div>
-        <div class="contact-detail-label">Address</div>
-        <div class="contact-detail-value">Saree Palace, Hampankatta Main Road,<br/>Mangalore, Karnataka – 575 001</div>
-      </div>
-    </div>
-
-    <div class="contact-detail">
-      <div class="contact-detail-icon">📞</div>
-      <div>
-        <div class="contact-detail-label">Phone</div>
-        <div class="contact-detail-value"><a href="tel:+919876543210" style="color:inherit">+91 98765 43210</a></div>
-      </div>
-    </div>
-
-    <div class="contact-detail">
-      <div class="contact-detail-icon">📧</div>
-      <div>
-        <div class="contact-detail-label">Email</div>
-        <div class="contact-detail-value"><a href="mailto:hello@sareepalacelace.com" style="color:inherit">hello@sareepalacelace.com</a></div>
-      </div>
-    </div>
-
-    <div class="contact-detail">
-      <div class="contact-detail-icon">🕐</div>
-      <div>
-        <div class="contact-detail-label">Store Hours</div>
-        <div class="contact-detail-value">Mon – Sat: 9:30 AM – 8:30 PM<br/>Sunday: 10:00 AM – 7:00 PM</div>
-      </div>
-    </div>
-
-    <div class="contact-social">
-      <a href="https://wa.me/919876543210" target="_blank" class="social-btn" title="WhatsApp" style="background:#25D366">💬</a>
-      <a href="https://www.instagram.com/" target="_blank" class="social-btn" title="Instagram" style="background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)">📸</a>
-      <a href="https://www.facebook.com/" target="_blank" class="social-btn" title="Facebook" style="background:#1877F2">📘</a>
-      <a href="https://www.youtube.com/" target="_blank" class="social-btn" title="YouTube" style="background:#FF0000">▶️</a>
+    <div class="c-detail"><div class="c-icon">📍</div><div><div class="c-lbl">Address</div><div class="c-val">Saree Palace, Hampankatta Main Road,<br/>Mangalore, Karnataka – 575 001</div></div></div>
+    <div class="c-detail"><div class="c-icon">📞</div><div><div class="c-lbl">Phone</div><div class="c-val"><a href="tel:+919876543210" style="color:inherit">+91 98765 43210</a></div></div></div>
+    <div class="c-detail"><div class="c-icon">📧</div><div><div class="c-lbl">Email</div><div class="c-val"><a href="mailto:support@sareepalacelace.com" style="color:inherit">support@sareepalacelace.com</a></div></div></div>
+    <div class="c-detail"><div class="c-icon">🕐</div><div><div class="c-lbl">Store Hours</div><div class="c-val">Mon – Sat: 9:30 AM – 8:30 PM<br/>Sunday: 10:00 AM – 7:00 PM</div></div></div>
+    <div class="c-social">
+      <a href="https://wa.me/919876543210" target="_blank" class="c-soc-btn" style="background:#25D366">💬</a>
+      <a href="https://www.instagram.com/" target="_blank" class="c-soc-btn" style="background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285AEB 90%)">📸</a>
+      <a href="https://www.facebook.com/" target="_blank" class="c-soc-btn" style="background:#1877F2">📘</a>
+      <a href="https://www.youtube.com/" target="_blank" class="c-soc-btn" style="background:#FF0000">▶️</a>
     </div>
   </div>
-
-  <!-- CONTACT FORM -->
   <div class="contact-form">
     <h3>Send Us a Message</h3>
     <div class="form-row">
-      <div class="form-group">
-        <label>First Name</label>
-        <input type="text" placeholder="Your first name"/>
-      </div>
-      <div class="form-group">
-        <label>Last Name</label>
-        <input type="text" placeholder="Your last name"/>
-      </div>
+      <div class="form-group"><label>First Name</label><input type="text" placeholder="Your first name"/></div>
+      <div class="form-group"><label>Last Name</label><input type="text" placeholder="Your last name"/></div>
     </div>
     <div class="form-row">
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" placeholder="your@email.com"/>
-      </div>
-      <div class="form-group">
-        <label>Phone</label>
-        <input type="tel" placeholder="+91 XXXXX XXXXX"/>
-      </div>
+      <div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com"/></div>
+      <div class="form-group"><label>Phone</label><input type="tel" placeholder="+91 XXXXX XXXXX"/></div>
     </div>
-    <div class="form-group">
-      <label>Subject</label>
-      <select>
-        <option>Order Enquiry</option>
-        <option>Product Information</option>
-        <option>Bridal Consultation</option>
-        <option>Return / Exchange</option>
-        <option>Wholesale Enquiry</option>
-        <option>Other</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label>Message</label>
-      <textarea placeholder="How can we help you?"></textarea>
-    </div>
-    <button class="btn-primary" style="width:100%;padding:16px;font-size:14px" onclick="showToast('✦ Message sent! We\'ll reply within 24 hours.')">Send Message</button>
-    <p style="font-size:12px;color:var(--light-muted);margin-top:12px;text-align:center">Or reach us instantly on <a href="https://wa.me/919876543210" target="_blank" style="color:#25D366;font-weight:600">WhatsApp</a></p>
+    <div class="form-group"><label>Subject</label><select><option>Order Enquiry</option><option>Product Information</option><option>Bridal Consultation</option><option>Return / Exchange</option><option>Wholesale Enquiry</option><option>Other</option></select></div>
+    <div class="form-group"><label>Message</label><textarea placeholder="How can we help you?"></textarea></div>
+    <button class="btn-pri" style="width:100%;padding:14px;font-size:13px" onclick="showToast('✦ Message sent! We'll reply within 24 hours.')">Send Message</button>
+    <p style="font-size:11px;color:var(--lt-muted);margin-top:10px;text-align:center">Or reach us instantly on <a href="https://wa.me/919876543210" target="_blank" style="color:#25D366;font-weight:600">WhatsApp</a></p>
   </div>
 </section>
-
-<!-- FAQ -->
-<section class="section bg-cream">
-  <div class="section-header">
-    <span class="section-label">Common Questions</span>
-    <h2 class="section-title">Frequently Asked <em>Questions</em></h2>
-    <div class="divider"></div>
-  </div>
-  <div style="max-width:720px;margin:0 auto" id="faq-list"></div>
+<section class="sec bg-cream">
+  <div class="sec-hdr"><span class="sec-lbl">Common Questions</span><h2 class="sec-title">Frequently Asked <em>Questions</em></h2><div class="divider"></div></div>
+  <div style="max-width:680px;margin:0 auto" id="faq"></div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
-  <div class="footer-top">
-    <div class="footer-brand">
-      <a href="index.html" class="logo">
-        <div class="logo-icon">✦</div>
-        <div class="logo-text">
-          <span class="logo-main" style="color:var(--gold-lt)">Saree Palace</span>
-          <span class="logo-sub">Est. 1987 · Handcrafted Elegance</span>
-        </div>
-      </a>
-      <p>Your most trusted destination for authentic Indian ethnic wear. Visit us at Hampankatta, Mangalore or shop online 24/7.</p>
-      <div class="footer-social-icons">
-        <a href="https://wa.me/919876543210" target="_blank" class="footer-social-btn">💬</a>
-        <a href="https://www.instagram.com/" target="_blank" class="footer-social-btn">📸</a>
-        <a href="https://www.facebook.com/" target="_blank" class="footer-social-btn">📘</a>
-        <a href="https://www.youtube.com/" target="_blank" class="footer-social-btn">▶️</a>
+  <div class="foot-top">
+    <div class="foot-brand">
+      <a href="index.html" class="logo"><div class="logo-icon">✦</div><div class="logo-text"><span class="logo-main" style="color:var(--gold-lt)">Saree Palace</span><span class="logo-sub">Est. 1987 · Handcrafted Elegance</span></div></a>
+      <p>Your most trusted destination for authentic Indian ethnic wear. Visit us at Hampankatta, Mangalore.</p>
+      <div class="foot-social">
+        <a href="https://wa.me/919876543210" target="_blank" class="foot-soc-btn">💬</a>
+        <a href="https://www.instagram.com/" target="_blank" class="foot-soc-btn">📸</a>
+        <a href="https://www.facebook.com/" target="_blank" class="foot-soc-btn">📘</a>
+        <a href="https://www.youtube.com/" target="_blank" class="foot-soc-btn">▶️</a>
       </div>
     </div>
-    <div class="footer-col">
-      <h5>Quick Links</h5>
-      <a href="index.html">Home</a>
-      <a href="collections.html">Collections</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="footer-col">
-      <h5>Categories</h5>
-      <a href="collections.html?cat=silk">Silk Sarees</a>
-      <a href="collections.html?cat=cotton">Cotton Sarees</a>
-      <a href="collections.html?cat=bridal">Bridal Sarees</a>
-      <a href="collections.html?cat=designer">Designer</a>
-    </div>
-    <div class="footer-col">
-      <h5>Help</h5>
-      <a href="contact.html">Track Order</a>
-      <a href="contact.html">Returns</a>
-      <a href="contact.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-    </div>
+    <div class="foot-col"><h5>Quick Links</h5><a href="index.html">Home</a><a href="collections.html">Collections</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></div>
+    <div class="foot-col"><h5>Categories</h5><a href="collections.html?cat=silk">Silk Sarees</a><a href="collections.html?cat=cotton">Cotton Sarees</a><a href="collections.html?cat=bridal">Bridal Sarees</a><a href="collections.html?cat=designer">Designer</a></div>
+    <div class="foot-col"><h5>Help</h5><a href="contact.html">Track Order</a><a href="contact.html">Returns</a><a href="contact.html">FAQ</a><a href="contact.html">Contact</a></div>
   </div>
-  <div class="footer-divider"></div>
-  <div class="footer-bottom">
+  <div class="foot-div"></div>
+  <div class="foot-bot">
     <p>© 2025 Saree Palace, Hampankatta, Mangalore. All rights reserved.</p>
     <p><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></p>
   </div>
 </footer>
-
-<div class="floating-social">
-  <a href="https://wa.me/919876543210" target="_blank" class="float-btn float-whatsapp">💬</a>
-  <a href="https://www.instagram.com/" target="_blank" class="float-btn float-instagram">📸</a>
-  <button class="float-btn float-back-top" id="back-top">↑</button>
+<div class="float-wrap">
+  <a href="https://wa.me/919876543210" target="_blank" class="fl-btn fl-wa">💬</a>
+  <a href="https://www.instagram.com/" target="_blank" class="fl-btn fl-ig">📸</a>
+  <button class="fl-btn fl-top" id="back-top">↑</button>
 </div>
-
 <script src="script.js"></script>
 <script>
-const faqs = [
-  { q: 'Do you ship pan-India?', a: 'Yes! We deliver across India. Orders above ₹1,499 get free shipping. Below that, a flat ₹99 charge applies.' },
-  { q: 'Can I return a saree if I\'m not satisfied?', a: 'We offer a 7-day hassle-free return policy. The saree must be unworn, unwashed and in original packaging.' },
-  { q: 'How do I check the authenticity of a silk saree?', a: 'All our silk sarees come with a silk mark certificate. You can also WhatsApp us for a video verification call.' },
-  { q: 'Do you offer bridal consultation?', a: 'Absolutely! Visit our Hampankatta store or chat with our bridal expert on WhatsApp to get personalised guidance.' },
-  { q: 'What payment methods do you accept?', a: 'We accept UPI, Credit/Debit Cards, Net Banking, and Cash on Delivery (COD) for most pin codes.' },
-  { q: 'How long does delivery take?', a: 'Metro cities: 2–4 business days. Tier 2 & 3 cities: 4–7 business days. You\'ll receive a tracking link via SMS/WhatsApp.' },
+(function(){
+  var h=document.getElementById('ham-btn'),n=document.getElementById('mnav'),c=document.getElementById('mnav-close'),b=document.getElementById('mnav-bg');
+  function open(){n.classList.add('open');document.body.style.overflow='hidden';h&&h.classList.add('open');}
+  function close(){n.classList.remove('open');document.body.style.overflow='';h&&h.classList.remove('open');}
+  if(h)h.addEventListener('click',open);
+  if(c)c.addEventListener('click',close);
+  if(b)b.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+<script>
+const FAQS=[
+  {q:'Do you ship pan-India?',a:'Yes! We deliver across India. Orders above ₹1,499 get free shipping. Below that, a flat ₹99 charge applies.'},
+  {q:"Can I return a saree if I'm not satisfied?",a:'We offer a 7-day hassle-free return policy. The saree must be unworn, unwashed and in original packaging.'},
+  {q:'How do I verify silk authenticity?',a:'All our silk sarees come with a Silk Mark certificate. You can also WhatsApp us for a video verification call.'},
+  {q:'Do you offer bridal consultation?',a:'Absolutely! Visit our Hampankatta store or chat with our bridal expert on WhatsApp for personalised guidance.'},
+  {q:'What payment methods do you accept?',a:'We accept UPI, Credit/Debit Cards, Net Banking, and Cash on Delivery (COD) for most pin codes.'},
+  {q:"How long does delivery take?",a:"Metro cities: 2–4 business days. Other cities: 4–7 business days. Tracking link sent via SMS/WhatsApp."},
 ];
-
-document.getElementById('faq-list').innerHTML = faqs.map((f, i) => `
-  <div style="background:var(--white);border-radius:10px;margin-bottom:12px;overflow:hidden;box-shadow:0 2px 8px rgba(107,26,42,0.05)">
-    <div onclick="toggleFaq(${i})" style="padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:500;color:var(--burgundy-dk)">
-      <span>${f.q}</span>
-      <span id="faq-arrow-${i}" style="font-size:18px;transition:transform 0.3s;color:var(--gold-dk)">+</span>
-    </div>
-    <div id="faq-ans-${i}" style="display:none;padding:0 24px 20px;color:var(--muted);font-size:14px;line-height:1.8">${f.a}</div>
-  </div>
-`).join('');
-
-function toggleFaq(i) {
-  const ans = document.getElementById('faq-ans-' + i);
-  const arrow = document.getElementById('faq-arrow-' + i);
-  const open = ans.style.display === 'block';
-  ans.style.display = open ? 'none' : 'block';
-  arrow.textContent = open ? '+' : '−';
-  arrow.style.transform = open ? '' : 'rotate(180deg)';
+document.getElementById('faq').innerHTML=FAQS.map((f,i)=>`
+  <div class="faq-item">
+    <div class="faq-q" onclick="tFaq(${i})"><span>${f.q}</span><span id="fa${i}">+</span></div>
+    <div class="faq-a" id="faq${i}">${f.a}</div>
+  </div>`).join('');
+function tFaq(i){
+  const a=document.getElementById('faq'+i),ar=document.getElementById('fa'+i);
+  const o=a.style.display==='block';
+  a.style.display=o?'none':'block';ar.textContent=o?'+':'−';
 }
 </script>
 </body>

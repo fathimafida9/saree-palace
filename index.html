@@ -3,44 +3,77 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Saree Palace – Handcrafted Elegance Since 1987</title>
+  <title>Saree Palace – Handcrafted Elegance Since 1987 – Saree Palace</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
-<!-- ANNOUNCEMENT -->
-<div class="announcement-bar">
-  <span>✦ Free Shipping on orders above ₹1499 &nbsp;&nbsp;&nbsp; ✦ Use code PALACE10 for 10% off &nbsp;&nbsp;&nbsp; ✦ New Arrivals Every Week! &nbsp;&nbsp;&nbsp; ✦ Authentic Handloom & Silk Sarees since 1987 &nbsp;&nbsp;&nbsp; ✦ Hampankatta, Mangalore</span>
-</div>
-
-<!-- HEADER -->
-<header class="header">
-  <div class="header-top">
-    <a href="index.html" class="logo">
-      <div class="logo-icon">✦</div>
-      <div class="logo-text">
-        <span class="logo-main">Saree Palace</span>
-        <span class="logo-sub">Est. 1987 · Handcrafted Elegance</span>
-      </div>
-    </a>
-    <nav class="header-nav">
-      <a href="index.html" class="active">Home</a>
+<!-- MOBILE NAV -->
+<div class="mnav" id="mnav">
+  <div class="mnav-bg" id="mnav-bg"></div>
+  <div class="mnav-drawer">
+    <div class="mnav-hdr">
+      <a href="index.html" class="logo">
+        <div class="logo-icon" style="width:30px;height:30px;font-size:13px">✦</div>
+        <div class="logo-text"><span class="logo-main">Saree Palace</span><span class="logo-sub">Est. 1987</span></div>
+      </a>
+      <button class="mnav-close" id="mnav-close">✕</button>
+    </div>
+    <div class="mnav-search">
+      <span class="si">🔍</span>
+      <input type="text" id="m-search" placeholder="Search sarees…"/>
+      <div class="srp mnav-srp" id="m-srp"></div>
+    </div>
+    <nav class="mnav-links">
+      <a href="index.html">Home</a>
       <a href="collections.html">Collections</a>
       <a href="product.html">Products</a>
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact</a>
+      <a href="cart.html">🛍 My Cart</a>
     </nav>
-    <div class="header-actions">
-      <div class="search-wrapper">
-        <span class="search-icon">🔍</span>
-        <input type="text" id="search-input" placeholder="Search sarees…"/>
-        <div class="search-results-panel" id="search-panel"></div>
+    <div class="mnav-cats">
+      <h6>Shop by Category</h6>
+      <div class="mnav-cat-grid">
+        <a href="collections.html?cat=silk" class="mnav-cat-btn"><span class="cat-dot" style="background:#c9973a"></span>Silk</a>
+        <a href="collections.html?cat=cotton" class="mnav-cat-btn"><span class="cat-dot" style="background:#8B4513"></span>Cotton</a>
+        <a href="collections.html?cat=bridal" class="mnav-cat-btn"><span class="cat-dot" style="background:#c0392b"></span>Bridal</a>
+        <a href="collections.html?cat=designer" class="mnav-cat-btn"><span class="cat-dot" style="background:#8e44ad"></span>Designer</a>
+        <a href="collections.html?cat=party" class="mnav-cat-btn"><span class="cat-dot" style="background:#e91e63"></span>Party Wear</a>
+        <a href="collections.html" class="mnav-cat-btn">✦ All</a>
       </div>
-      <a href="cart.html" class="btn-cart">🛍 Cart (<span class="cart-count">0</span>)</a>
+    </div>
+    <div class="mnav-foot">
+      <a href="https://wa.me/919876543210" target="_blank" class="mnav-wa">💬 WhatsApp</a>
+      <a href="https://www.instagram.com/" target="_blank" class="mnav-ig">📸 Instagram</a>
     </div>
   </div>
-  <nav class="category-nav">
-    <a href="collections.html" data-filter="all"><span class="cat-dot" style="background:var(--gold)"></span>All</a>
+</div>
+<div class="ann-bar"><span>✦ Free Shipping above ₹1499 &nbsp;&nbsp; ✦ Code PALACE10 for 10% off &nbsp;&nbsp; ✦ New Arrivals Every Week! &nbsp;&nbsp; ✦ Authentic Handloom &amp; Silk since 1987</span></div>
+<header class="header">
+  <div class="header-top">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">✦</div>
+      <div class="logo-text"><span class="logo-main">Saree Palace</span><span class="logo-sub">Est. 1987 · Handcrafted Elegance</span></div>
+    </a>
+    <nav class="hdr-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="collections.html" >Collections</a>
+      <a href="product.html" >Products</a>
+      <a href="about.html" >About Us</a>
+      <a href="contact.html" >Contact</a>
+    </nav>
+    <div class="hdr-actions">
+      <div class="search-wrap">
+        <span class="si">🔍</span>
+        <input type="text" id="d-search" placeholder="Search sarees…"/>
+        <div class="srp" id="d-srp"></div>
+      </div>
+      <a href="cart.html" class="btn-cart">🛍 Cart (<span class="cart-count">0</span>)</a>
+      <button class="hamburger" id="ham-btn"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="cat-nav">
+    <a href="collections.html"><span class="cat-dot" style="background:var(--gold)"></span>All</a>
     <a href="collections.html?cat=silk"><span class="cat-dot" style="background:#c9973a"></span>Silk Sarees</a>
     <a href="collections.html?cat=cotton"><span class="cat-dot" style="background:#8B4513"></span>Cotton Sarees</a>
     <a href="collections.html?cat=bridal"><span class="cat-dot" style="background:#c0392b"></span>Bridal Sarees</a>
@@ -49,328 +82,142 @@
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
+  <div class="hero-body">
     <div class="hero-label">✦ Mangalore's Finest Since 1987</div>
-    <h1>Draped in<br/><em>Timeless</em><br/>Elegance</h1>
-    <p class="hero-desc">
-      Discover over 5,000 handpicked sarees — from heirloom Kanjivaram silk
-      to everyday handloom cotton. Each thread tells a story.
-    </p>
-    <div class="hero-actions">
-      <a href="collections.html" class="btn-primary">Shop Collections</a>
-      <a href="about.html" class="btn-outline">Our Story</a>
+    <h1 class="hero-title">Draped in<br/><em>Timeless</em><br/>Elegance</h1>
+    <p class="hero-desc">Discover over 5,000 handpicked sarees — from heirloom Kanjivaram silk to everyday handloom cotton.</p>
+    <div class="hero-btns">
+      <a href="collections.html" class="btn-pri">Shop Collections</a>
+      <a href="about.html" class="btn-out">Our Story</a>
     </div>
     <div class="hero-stats">
-      <div>
-        <div class="hero-stat-num">5,000+</div>
-        <div class="hero-stat-label">Sarees</div>
-      </div>
-      <div>
-        <div class="hero-stat-num">37</div>
-        <div class="hero-stat-label">Years of Trust</div>
-      </div>
-      <div>
-        <div class="hero-stat-num">50k+</div>
-        <div class="hero-stat-label">Happy Customers</div>
-      </div>
+      <div><div class="stat-num">5,000+</div><div class="stat-lbl">Sarees</div></div>
+      <div><div class="stat-num">37</div><div class="stat-lbl">Years of Trust</div></div>
+      <div><div class="stat-num">50k+</div><div class="stat-lbl">Happy Customers</div></div>
     </div>
   </div>
-  <div class="hero-image">
-    <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1200&q=85" alt="Bridal Saree Collection"/>
-    <div class="hero-image-overlay"></div>
-    <div class="hero-badge">
-      <div class="hero-badge-icon">⭐</div>
-      <div class="hero-badge-text">
-        <strong>4.9 / 5 Rating</strong>
-        <span>Based on 12,000+ reviews</span>
-      </div>
-    </div>
+  <div class="hero-img-wrap">
+    <img src="118.jfif" alt="Bridal Saree Collection"/>
+    <div class="hero-img-overlay"></div>
+    <div class="hero-badge"><div class="hero-badge-icon">⭐</div><div><strong>4.9 / 5 Rating</strong><span>12,000+ reviews</span></div></div>
   </div>
 </section>
 
-<!-- CATEGORIES -->
-<section class="section">
-  <div class="section-header">
-    <span class="section-label">Browse by Category</span>
-    <h2 class="section-title">Find Your <em>Perfect</em> Drape</h2>
-    <div class="divider"></div>
-  </div>
-  <div class="categories-grid">
-    <a href="collections.html?cat=silk" class="category-card">
-      <img src="https://images.unsplash.com/photo-1583391733981-8498408ee4b6?w=800&q=80" alt="Silk Sarees"/>
-      <div class="category-card-overlay">
-        <div class="category-card-label">Heritage Weaves</div>
-        <div class="category-card-name">Silk Sarees</div>
-        <div class="category-card-count">120+ styles available</div>
-        <div class="category-card-arrow">→</div>
-      </div>
-    </a>
-    <a href="collections.html?cat=cotton" class="category-card">
-      <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=800&q=80" alt="Cotton Sarees"/>
-      <div class="category-card-overlay">
-        <div class="category-card-label">Everyday Comfort</div>
-        <div class="category-card-name">Cotton Sarees</div>
-        <div class="category-card-count">200+ styles available</div>
-        <div class="category-card-arrow">→</div>
-      </div>
-    </a>
-    <a href="collections.html?cat=bridal" class="category-card">
-      <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=800&q=80" alt="Bridal Sarees"/>
-      <div class="category-card-overlay">
-        <div class="category-card-label">For Your Special Day</div>
-        <div class="category-card-name">Bridal Sarees</div>
-        <div class="category-card-count">80+ styles available</div>
-        <div class="category-card-arrow">→</div>
-      </div>
-    </a>
-    <a href="collections.html?cat=designer" class="category-card">
-      <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800&q=80" alt="Designer Sarees"/>
-      <div class="category-card-overlay">
-        <div class="category-card-label">Contemporary Craft</div>
-        <div class="category-card-name">Designer Sarees</div>
-        <div class="category-card-count">60+ styles available</div>
-        <div class="category-card-arrow">→</div>
-      </div>
-    </a>
-    <a href="collections.html?cat=party" class="category-card">
-      <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&q=80" alt="Party Wear"/>
-      <div class="category-card-overlay">
-        <div class="category-card-label">Celebrate in Style</div>
-        <div class="category-card-name">Party Wear</div>
-        <div class="category-card-count">90+ styles available</div>
-        <div class="category-card-arrow">→</div>
-      </div>
-    </a>
-    <a href="collections.html" class="category-card" style="background:var(--burgundy-dk)">
-      <div class="category-card-overlay" style="background:none;justify-content:center;align-items:center;text-align:center">
-        <div style="font-size:48px;margin-bottom:16px">✦</div>
-        <div class="category-card-name" style="font-size:28px">View All</div>
-        <div class="category-card-count" style="margin-top:6px">5,000+ sarees</div>
-        <div class="category-card-arrow" style="margin:16px auto 0">→</div>
-      </div>
-    </a>
+<section class="sec">
+  <div class="sec-hdr"><span class="sec-lbl">Browse by Category</span><h2 class="sec-title">Find Your <em>Perfect</em> Drape</h2><div class="divider"></div></div>
+  <div class="cat-grid">
+    <a href="collections.html?cat=silk" class="cat-card"><img src="13.jfif" alt="Silk"/><div class="cat-overlay"><div class="cat-label">Heritage Weaves</div><div class="cat-name">Silk Sarees</div><div class="cat-count">120+ styles</div><div class="cat-arrow">→</div></div></a>
+    <a href="collections.html?cat=cotton" class="cat-card"><img src="hand.jfif" alt="Cotton"/><div class="cat-overlay"><div class="cat-label">Everyday Comfort</div><div class="cat-name">Cotton Sarees</div><div class="cat-count">200+ styles</div><div class="cat-arrow">→</div></div></a>
+    <a href="collections.html?cat=bridal" class="cat-card"><img src="12.jfif" alt="Bridal"/><div class="cat-overlay"><div class="cat-label">For Your Special Day</div><div class="cat-name">Bridal Sarees</div><div class="cat-count">80+ styles</div><div class="cat-arrow">→</div></div></a>
+    <a href="collections.html?cat=designer" class="cat-card"><img src="yellow.jfif" alt="Designer"/><div class="cat-overlay"><div class="cat-label">Contemporary Craft</div><div class="cat-name">Designer Sarees</div><div class="cat-count">60+ styles</div><div class="cat-arrow">→</div></div></a>
+    <a href="collections.html?cat=party" class="cat-card"><img src="pink.jfif" alt="Party"/><div class="cat-overlay"><div class="cat-label">Celebrate in Style</div><div class="cat-name">Party Wear</div><div class="cat-count">90+ styles</div><div class="cat-arrow">→</div></div></a>
+    <a href="collections.html" class="cat-card cat-all-card"><div class="cat-overlay" style="justify-content:center;align-items:center;text-align:center;background:none"><div style="font-size:42px;margin-bottom:12px">✦</div><div class="cat-name">View All</div><div class="cat-count" style="margin-top:4px">5,000+ sarees</div><div class="cat-arrow" style="margin:12px auto 0">→</div></div></a>
   </div>
 </section>
 
-<!-- BESTSELLERS -->
-<section class="section bg-cream">
-  <div class="section-header">
-    <span class="section-label">Customer Favourites</span>
-    <h2 class="section-title">Bestselling <em>Sarees</em></h2>
-    <div class="divider"></div>
-  </div>
-  <div class="product-grid" id="bestseller-grid"></div>
-  <div style="text-align:center;margin-top:48px">
-    <a href="collections.html" class="btn-primary">View All Collections</a>
+<section class="sec bg-cream">
+  <div class="sec-hdr"><span class="sec-lbl">Customer Favourites</span><h2 class="sec-title">Bestselling <em>Sarees</em></h2><div class="divider"></div></div>
+  <div class="prod-grid" id="best-grid"></div>
+  <div style="text-align:center;margin-top:36px"><a href="collections.html" class="btn-pri">View All Collections</a></div>
+</section>
+
+<section class="sec bg-dark">
+  <div class="sec-hdr"><span class="sec-lbl">Why Choose Us</span><h2 class="sec-title">The <em>Saree Palace</em> Promise</h2><div class="divider"></div></div>
+  <div class="offers-grid">
+    <div class="offer-item"><div class="offer-icon">🚚</div><div class="offer-title">Free Shipping</div><p class="offer-desc">Complimentary delivery on orders above ₹1,499. Pan-India shipping.</p></div>
+    <div class="offer-item"><div class="offer-icon">🔄</div><div class="offer-title">Easy Returns</div><p class="offer-desc">Hassle-free 7-day return policy. Your satisfaction is guaranteed.</p></div>
+    <div class="offer-item"><div class="offer-icon">🧵</div><div class="offer-title">100% Authentic</div><p class="offer-desc">Directly sourced from master weavers. Certified genuine silk.</p></div>
+    <div class="offer-item"><div class="offer-icon">💳</div><div class="offer-title">Secure Payment</div><p class="offer-desc">UPI, Cards, Net Banking, COD — all payment methods accepted.</p></div>
+    <div class="offer-item"><div class="offer-icon">📦</div><div class="offer-title">Gift Packaging</div><p class="offer-desc">Complimentary luxury gift wrapping. Perfect for gifting.</p></div>
+    <div class="offer-item"><div class="offer-icon">🤝</div><div class="offer-title">Expert Advice</div><p class="offer-desc">Our saree experts help you find the perfect match via WhatsApp.</p></div>
   </div>
 </section>
 
-<!-- OFFERS -->
-<section class="offer-banner">
-  <div class="section-header" style="margin-bottom:48px">
-    <span class="section-label" style="color:var(--gold)">Why Choose Us</span>
-    <h2 class="section-title" style="color:var(--white)">The <em>Saree Palace</em> Promise</h2>
-    <div class="divider"></div>
-  </div>
-  <div class="offer-banner-grid">
-    <div class="offer-item">
-      <div class="offer-icon">🚚</div>
-      <div class="offer-title">Free Shipping</div>
-      <div class="offer-desc">Complimentary delivery on all orders above ₹1,499. Pan-India shipping.</div>
-    </div>
-    <div class="offer-item">
-      <div class="offer-icon">🔄</div>
-      <div class="offer-title">Easy Returns</div>
-      <div class="offer-desc">Hassle-free 7-day return policy. Your satisfaction is guaranteed.</div>
-    </div>
-    <div class="offer-item">
-      <div class="offer-icon">🧵</div>
-      <div class="offer-title">100% Authentic</div>
-      <div class="offer-desc">Directly sourced from master weavers across India. Certified genuine silk.</div>
-    </div>
-    <div class="offer-item">
-      <div class="offer-icon">💳</div>
-      <div class="offer-title">Secure Payment</div>
-      <div class="offer-desc">UPI, Cards, Net Banking, COD — all payment methods accepted.</div>
-    </div>
-    <div class="offer-item">
-      <div class="offer-icon">📦</div>
-      <div class="offer-title">Gift Packaging</div>
-      <div class="offer-desc">Complimentary luxury gift wrapping for all orders. Perfect for gifting.</div>
-    </div>
-    <div class="offer-item">
-      <div class="offer-icon">🤝</div>
-      <div class="offer-title">Expert Advice</div>
-      <div class="offer-desc">Our saree experts help you find the perfect match. Call or WhatsApp us.</div>
-    </div>
+<section class="sec">
+  <div class="sec-hdr"><span class="sec-lbl">Just Arrived</span><h2 class="sec-title">New <em>Arrivals</em></h2><div class="divider"></div></div>
+  <div class="prod-grid" id="new-grid"></div>
+</section>
+
+<section class="sec bg-cream">
+  <div class="sec-hdr"><span class="sec-lbl">What Our Customers Say</span><h2 class="sec-title">Stories of <em>Joy</em></h2><div class="divider"></div></div>
+  <div class="testi-grid">
+    <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">I ordered a Kanjivaram for my daughter's wedding. The quality was extraordinary — exactly as described. Fast delivery and beautifully packed!</p><div class="testi-author"><div class="testi-av">P</div><div><div class="testi-name">Priya Shenoy</div><div class="testi-city">Bangalore</div></div></div></div>
+    <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">Been shopping at Saree Palace Hampankatta for 15 years. Their online store is just as good. The Chanderi saree is simply gorgeous!</p><div class="testi-author"><div class="testi-av">R</div><div><div class="testi-name">Rekha Bhat</div><div class="testi-city">Mangalore</div></div></div></div>
+    <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">Amazing collection and genuine pricing. The WhatsApp team helped me pick the perfect saree for my anniversary. Highly recommend!</p><div class="testi-author"><div class="testi-av">A</div><div><div class="testi-name">Asha Kamath</div><div class="testi-city">Udupi</div></div></div></div>
   </div>
 </section>
 
-<!-- NEW ARRIVALS -->
-<section class="section">
-  <div class="section-header">
-    <span class="section-label">Just Arrived</span>
-    <h2 class="section-title">New <em>Arrivals</em></h2>
-    <div class="divider"></div>
-  </div>
-  <div class="product-grid" id="new-arrivals-grid"></div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="section bg-cream">
-  <div class="section-header">
-    <span class="section-label">What Our Customers Say</span>
-    <h2 class="section-title">Stories of <em>Joy</em></h2>
-    <div class="divider"></div>
-  </div>
-  <div class="testimonials-grid">
-    <div class="testimonial-card">
-      <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">I ordered a Kanjivaram for my daughter's wedding. The quality was extraordinary — exactly as described. Fast delivery to Bangalore and beautifully packed!</p>
-      <div class="testimonial-author">
-        <div class="testimonial-avatar">P</div>
-        <div>
-          <div class="testimonial-name">Priya Shenoy</div>
-          <div class="testimonial-city">Bangalore</div>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial-card">
-      <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">Been shopping at Saree Palace Hampankatta for 15 years. Their online store is just as good. The Chanderi saree I bought is simply gorgeous!</p>
-      <div class="testimonial-author">
-        <div class="testimonial-avatar">R</div>
-        <div>
-          <div class="testimonial-name">Rekha Bhat</div>
-          <div class="testimonial-city">Mangalore</div>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial-card">
-      <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">Amazing collection and very genuine pricing. The WhatsApp customer service team helped me pick the perfect saree for my anniversary. Highly recommend!</p>
-      <div class="testimonial-author">
-        <div class="testimonial-avatar">A</div>
-        <div>
-          <div class="testimonial-name">Asha Kamath</div>
-          <div class="testimonial-city">Udupi</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- NEWSLETTER -->
-<section class="newsletter">
-  <span class="section-label">Stay in the Loop</span>
+<section class="news">
+  <span class="sec-lbl">Stay in the Loop</span>
   <h2>New Arrivals, Exclusive Offers</h2>
-  <p>Subscribe to our newsletter and be the first to know about new collections, festive sales and special offers.</p>
-  <div class="newsletter-form">
+  <p>Subscribe and be first to know about new collections, festive sales and special offers.</p>
+  <div class="news-form">
     <input type="email" placeholder="Enter your email address…"/>
-    <button class="btn-primary" onclick="showToast('✦ Thank you for subscribing!')">Subscribe</button>
+    <button class="btn-pri" onclick="showToast('✦ Thank you for subscribing!')">Subscribe</button>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
-  <div class="footer-top">
-    <div class="footer-brand">
-      <a href="index.html" class="logo">
-        <div class="logo-icon">✦</div>
-        <div class="logo-text">
-          <span class="logo-main" style="color:var(--gold-lt)">Saree Palace</span>
-          <span class="logo-sub">Est. 1987 · Handcrafted Elegance</span>
-        </div>
-      </a>
-      <p>Your most trusted destination for authentic Indian ethnic wear. Visit us at Hampankatta, Mangalore or shop online 24/7.</p>
-      <div class="footer-social-icons">
-        <a href="https://wa.me/919876543210" target="_blank" class="footer-social-btn" title="WhatsApp">💬</a>
-        <a href="https://www.instagram.com/" target="_blank" class="footer-social-btn" title="Instagram">📸</a>
-        <a href="https://www.facebook.com/" target="_blank" class="footer-social-btn" title="Facebook">📘</a>
-        <a href="https://www.youtube.com/" target="_blank" class="footer-social-btn" title="YouTube">▶️</a>
+  <div class="foot-top">
+    <div class="foot-brand">
+      <a href="index.html" class="logo"><div class="logo-icon">✦</div><div class="logo-text"><span class="logo-main" style="color:var(--gold-lt)">Saree Palace</span><span class="logo-sub">Est. 1987 · Handcrafted Elegance</span></div></a>
+      <p>Your most trusted destination for authentic Indian ethnic wear. Visit us at Hampankatta, Mangalore.</p>
+      <div class="foot-social">
+        <a href="https://wa.me/919876543210" target="_blank" class="foot-soc-btn">💬</a>
+        <a href="https://www.instagram.com/" target="_blank" class="foot-soc-btn">📸</a>
+        <a href="https://www.facebook.com/" target="_blank" class="foot-soc-btn">📘</a>
+        <a href="https://www.youtube.com/" target="_blank" class="foot-soc-btn">▶️</a>
       </div>
     </div>
-    <div class="footer-col">
-      <h5>Quick Links</h5>
-      <a href="index.html">Home</a>
-      <a href="collections.html">Collections</a>
-      <a href="product.html">Products</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="footer-col">
-      <h5>Categories</h5>
-      <a href="collections.html?cat=silk">Silk Sarees</a>
-      <a href="collections.html?cat=cotton">Cotton Sarees</a>
-      <a href="collections.html?cat=bridal">Bridal Sarees</a>
-      <a href="collections.html?cat=designer">Designer Sarees</a>
-      <a href="collections.html?cat=party">Party Wear</a>
-    </div>
-    <div class="footer-col">
-      <h5>Help & Info</h5>
-      <a href="contact.html">Track My Order</a>
-      <a href="contact.html">Returns & Refunds</a>
-      <a href="contact.html">FAQ</a>
-      <a href="about.html">Our Story</a>
-      <a href="contact.html">Contact Us</a>
-    </div>
+    <div class="foot-col"><h5>Quick Links</h5><a href="index.html">Home</a><a href="collections.html">Collections</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></div>
+    <div class="foot-col"><h5>Categories</h5><a href="collections.html?cat=silk">Silk Sarees</a><a href="collections.html?cat=cotton">Cotton Sarees</a><a href="collections.html?cat=bridal">Bridal Sarees</a><a href="collections.html?cat=designer">Designer</a></div>
+    <div class="foot-col"><h5>Help</h5><a href="contact.html">Track Order</a><a href="contact.html">Returns</a><a href="contact.html">FAQ</a><a href="contact.html">Contact</a></div>
   </div>
-  <div class="footer-divider"></div>
-  <div class="footer-bottom">
+  <div class="foot-div"></div>
+  <div class="foot-bot">
     <p>© 2025 Saree Palace, Hampankatta, Mangalore. All rights reserved.</p>
     <p><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></p>
   </div>
 </footer>
-
-<!-- FLOATING SOCIAL BUTTONS -->
-<div class="floating-social">
-  <a href="https://wa.me/919876543210" target="_blank" class="float-btn float-whatsapp" title="Chat on WhatsApp">💬</a>
-  <a href="https://www.instagram.com/" target="_blank" class="float-btn float-instagram" title="Follow on Instagram">📸</a>
-  <button class="float-btn float-back-top" id="back-top" title="Back to Top">↑</button>
+<div class="float-wrap">
+  <a href="https://wa.me/919876543210" target="_blank" class="fl-btn fl-wa">💬</a>
+  <a href="https://www.instagram.com/" target="_blank" class="fl-btn fl-ig">📸</a>
+  <button class="fl-btn fl-top" id="back-top">↑</button>
 </div>
-
 <script src="script.js"></script>
 <script>
-  // Render bestsellers
-  const bestsellerIds = [1, 6, 9, 15];
-  const newArrivalIds = [2, 5, 11, 13];
-
-  function renderProductGrid(ids, containerId) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-    container.innerHTML = ids.map(id => {
-      const p = PRODUCTS.find(x => x.id === id);
-      if (!p) return '';
-      const discount = Math.round((1 - p.price / p.oldPrice) * 100);
-      return `
-        <div class="product-card" onclick="window.location.href='product.html?id=${p.id}'">
-          <div class="product-img">
-            <img src="${p.img}" alt="${p.name}" loading="lazy"/>
-            <div class="product-badge">${p.badge}</div>
-            <div class="product-wishlist" onclick="event.stopPropagation();this.textContent=this.textContent==='♡'?'♥':'♡'">♡</div>
-          </div>
-          <div class="product-info">
-            <h4>${p.name}</h4>
-            <p class="product-material">${p.material}</p>
-            <div class="product-price">
-              <span class="price-now">₹${p.price.toLocaleString('en-IN')}</span>
-              <span class="price-old">₹${p.oldPrice.toLocaleString('en-IN')}</span>
-              <span class="price-off">${discount}% off</span>
-            </div>
-            <div class="product-actions">
-              <a href="product.html?id=${p.id}" class="btn-view">View</a>
-              <button class="btn-addcart" onclick="event.stopPropagation();addToCart(${p.id})">Add to Cart</button>
-            </div>
-          </div>
+(function(){
+  var h=document.getElementById('ham-btn'),n=document.getElementById('mnav'),c=document.getElementById('mnav-close'),b=document.getElementById('mnav-bg');
+  function open(){n.classList.add('open');document.body.style.overflow='hidden';h&&h.classList.add('open');}
+  function close(){n.classList.remove('open');document.body.style.overflow='';h&&h.classList.remove('open');}
+  if(h)h.addEventListener('click',open);
+  if(c)c.addEventListener('click',close);
+  if(b)b.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+<script>
+function rg(ids,cid){
+  const g=document.getElementById(cid);if(!g)return;
+  g.innerHTML=ids.map(id=>{
+    const p=PRODUCTS.find(x=>x.id===id);if(!p)return'';
+    const d=Math.round((1-p.price/p.oldPrice)*100);
+    return`<div class="prod-card" onclick="location.href='product.html?id=${p.id}'">
+      <div class="prod-img"><img src="${p.img}" alt="${p.name}" loading="lazy"/>
+        <div class="prod-badge">${p.badge}</div></div>
+      <div class="prod-info">
+        <div class="prod-name">${p.name}</div>
+        <div class="prod-mat">${p.material}</div>
+        <div class="prod-price"><span class="p-now">₹${p.price.toLocaleString('en-IN')}</span><span class="p-old">₹${p.oldPrice.toLocaleString('en-IN')}</span><span class="p-off">${d}% off</span></div>
+        <div class="prod-acts">
+          <a href="product.html?id=${p.id}" class="btn-view" onclick="event.stopPropagation()">View</a>
+          <button class="btn-ac" onclick="event.stopPropagation();addToCart(${p.id})">Add to Cart</button>
         </div>
-      `;
-    }).join('');
-  }
-
-  renderProductGrid(bestsellerIds, 'bestseller-grid');
-  renderProductGrid(newArrivalIds, 'new-arrivals-grid');
+      </div></div>`;}).join('');
+}
+rg([1,6,9,15],'best-grid');
+rg([2,5,11,13],'new-grid');
 </script>
 </body>
 </html>

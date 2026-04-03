@@ -7,38 +7,73 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
-<div class="announcement-bar">
-  <span>✦ Free Shipping on orders above ₹1499 &nbsp;&nbsp;&nbsp; ✦ Use code PALACE10 for 10% off &nbsp;&nbsp;&nbsp; ✦ New Arrivals Every Week!</span>
-</div>
-
-<header class="header">
-  <div class="header-top">
-    <a href="index.html" class="logo">
-      <div class="logo-icon">✦</div>
-      <div class="logo-text">
-        <span class="logo-main">Saree Palace</span>
-        <span class="logo-sub">Est. 1987 · Handcrafted Elegance</span>
-      </div>
-    </a>
-    <nav class="header-nav">
+<!-- MOBILE NAV -->
+<div class="mnav" id="mnav">
+  <div class="mnav-bg" id="mnav-bg"></div>
+  <div class="mnav-drawer">
+    <div class="mnav-hdr">
+      <a href="index.html" class="logo">
+        <div class="logo-icon" style="width:30px;height:30px;font-size:13px">✦</div>
+        <div class="logo-text"><span class="logo-main">Saree Palace</span><span class="logo-sub">Est. 1987</span></div>
+      </a>
+      <button class="mnav-close" id="mnav-close">✕</button>
+    </div>
+    <div class="mnav-search">
+      <span class="si">🔍</span>
+      <input type="text" id="m-search" placeholder="Search sarees…"/>
+      <div class="srp mnav-srp" id="m-srp"></div>
+    </div>
+    <nav class="mnav-links">
       <a href="index.html">Home</a>
       <a href="collections.html">Collections</a>
       <a href="product.html">Products</a>
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact</a>
+      <a href="cart.html">🛍 My Cart</a>
     </nav>
-    <div class="header-actions">
-      <div class="search-wrapper">
-        <span class="search-icon">🔍</span>
-        <input type="text" id="search-input" placeholder="Search sarees…"/>
-        <div class="search-results-panel" id="search-panel"></div>
+    <div class="mnav-cats">
+      <h6>Shop by Category</h6>
+      <div class="mnav-cat-grid">
+        <a href="collections.html?cat=silk" class="mnav-cat-btn"><span class="cat-dot" style="background:#c9973a"></span>Silk</a>
+        <a href="collections.html?cat=cotton" class="mnav-cat-btn"><span class="cat-dot" style="background:#8B4513"></span>Cotton</a>
+        <a href="collections.html?cat=bridal" class="mnav-cat-btn"><span class="cat-dot" style="background:#c0392b"></span>Bridal</a>
+        <a href="collections.html?cat=designer" class="mnav-cat-btn"><span class="cat-dot" style="background:#8e44ad"></span>Designer</a>
+        <a href="collections.html?cat=party" class="mnav-cat-btn"><span class="cat-dot" style="background:#e91e63"></span>Party Wear</a>
+        <a href="collections.html" class="mnav-cat-btn">✦ All</a>
       </div>
-      <a href="cart.html" class="btn-cart">🛍 Cart (<span class="cart-count">0</span>)</a>
+    </div>
+    <div class="mnav-foot">
+      <a href="https://wa.me/919876543210" target="_blank" class="mnav-wa">💬 WhatsApp</a>
+      <a href="https://www.instagram.com/" target="_blank" class="mnav-ig">📸 Instagram</a>
     </div>
   </div>
-  <nav class="category-nav">
-    <a href="collections.html?cat=all"><span class="cat-dot" style="background:var(--gold)"></span>All</a>
+</div>
+<div class="ann-bar"><span>✦ Free Shipping above ₹1499 &nbsp;&nbsp; ✦ Code PALACE10 for 10% off &nbsp;&nbsp; ✦ New Arrivals Every Week! &nbsp;&nbsp; ✦ Authentic Handloom &amp; Silk since 1987</span></div>
+<header class="header">
+  <div class="header-top">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">✦</div>
+      <div class="logo-text"><span class="logo-main">Saree Palace</span><span class="logo-sub">Est. 1987 · Handcrafted Elegance</span></div>
+    </a>
+    <nav class="hdr-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="collections.html" >Collections</a>
+      <a href="product.html" >Products</a>
+      <a href="about.html" >About Us</a>
+      <a href="contact.html" >Contact</a>
+    </nav>
+    <div class="hdr-actions">
+      <div class="search-wrap">
+        <span class="si">🔍</span>
+        <input type="text" id="d-search" placeholder="Search sarees…"/>
+        <div class="srp" id="d-srp"></div>
+      </div>
+      <a href="cart.html" class="btn-cart">🛍 Cart (<span class="cart-count">0</span>)</a>
+      <button class="hamburger" id="ham-btn"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="cat-nav">
+    <a href="collections.html"><span class="cat-dot" style="background:var(--gold)"></span>All</a>
     <a href="collections.html?cat=silk"><span class="cat-dot" style="background:#c9973a"></span>Silk Sarees</a>
     <a href="collections.html?cat=cotton"><span class="cat-dot" style="background:#8B4513"></span>Cotton Sarees</a>
     <a href="collections.html?cat=bridal"><span class="cat-dot" style="background:#c0392b"></span>Bridal Sarees</a>
@@ -47,168 +82,99 @@
   </nav>
 </header>
 
-<section class="page-hero" style="padding:48px 80px">
-  <div class="breadcrumb"><a href="index.html">Home</a><span>›</span> Cart</div>
-  <h1>Your <em style="font-style:italic;color:var(--gold-lt)">Cart</em></h1>
-</section>
-
-<!-- EMPTY CART -->
-<div id="cart-empty" style="display:none;text-align:center;padding:80px 24px">
-  <div style="font-size:64px;margin-bottom:24px">🛍</div>
-  <h2 style="font-size:32px;color:var(--burgundy-dk);margin-bottom:12px">Your cart is empty</h2>
-  <p style="color:var(--muted);margin-bottom:32px">Discover our beautiful saree collections and add your favourites!</p>
-  <a href="collections.html" class="btn-primary">Browse Collections</a>
+<div class="pg-hero" style="padding:40px 72px">
+  <div class="breadcrumb"><a href="index.html">Home</a><span>›</span>Cart</div>
+  <h1>Your <em>Cart</em></h1>
 </div>
-
-<!-- CART CONTENT -->
-<div class="cart-grid" id="cart-table-wrap">
+<div id="cart-empty" style="display:none;text-align:center;padding:64px 20px">
+  <div style="font-size:56px;margin-bottom:20px">🛍</div>
+  <h2 style="font-size:28px;color:var(--burg-dk);margin-bottom:10px">Your cart is empty</h2>
+  <p style="color:var(--muted);margin-bottom:28px">Discover our beautiful saree collections and add your favourites!</p>
+  <a href="collections.html" class="btn-pri">Browse Collections</a>
+</div>
+<div class="cart-wrap" id="cart-table-wrap">
   <div>
-    <table class="cart-table">
-      <thead>
-        <tr>
-          <th>Image</th>
-          <th>Product</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Total</th>
-          <th></th>
-        </tr>
-      </thead>
+    <table class="cart-tbl">
+      <thead><tr><th>Image</th><th>Product</th><th class="hide-m">Price</th><th>Qty</th><th>Total</th><th></th></tr></thead>
       <tbody id="cart-body"></tbody>
     </table>
-    <div style="margin-top:20px;display:flex;gap:12px">
-      <a href="collections.html" class="btn-outline" style="font-size:13px;padding:12px 24px">← Continue Shopping</a>
-    </div>
+    <div style="margin-top:16px"><a href="collections.html" class="btn-out" style="font-size:12px;padding:10px 20px">← Continue Shopping</a></div>
   </div>
-
   <div id="cart-summary-wrap">
     <div class="cart-summary">
       <h3>Order Summary</h3>
-      <div class="summary-row"><span>Subtotal</span><span id="subtotal">₹0</span></div>
-      <div class="summary-row"><span>Shipping</span><span id="shipping">₹99</span></div>
-      <div class="summary-row"><span>Discount (PALACE10)</span><span style="color:#22a861">–₹0</span></div>
-
-      <div class="coupon-row">
-        <input type="text" placeholder="Enter coupon code" id="coupon-input"/>
-        <button class="btn-apply" onclick="applyCoupon()">Apply</button>
-      </div>
-
-      <div class="summary-row total"><span>Total</span><span id="total">₹0</span></div>
-
-      <button class="btn-primary" style="width:100%;padding:16px;font-size:14px;margin-top:16px" onclick="showToast('✦ Redirecting to secure checkout…')">
-        Proceed to Checkout →
-      </button>
-      <div style="text-align:center;margin-top:16px;font-size:12px;color:var(--light-muted)">
-        🔒 Secure & Encrypted Checkout
-      </div>
-      <div style="margin-top:20px;padding:16px;background:var(--cream);border-radius:8px;text-align:center">
-        <p style="font-size:12px;color:var(--muted);margin-bottom:8px">Need help? Chat with us!</p>
-        <a href="https://wa.me/919876543210" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:#25D366;color:#fff;padding:9px 18px;border-radius:24px;font-size:13px;font-weight:600;text-decoration:none">
-          💬 WhatsApp
-        </a>
+      <div class="sum-row"><span>Subtotal</span><span id="subtotal">₹0</span></div>
+      <div class="sum-row"><span>Shipping</span><span id="shipping">₹99</span></div>
+      <div class="ship-nudge" id="shipping-nudge"></div>
+      <div class="sum-row"><span>Discount</span><span style="color:#22a861">–₹0</span></div>
+      <div class="coupon-row"><input type="text" placeholder="Coupon code" id="cpn"/><button class="btn-apply" onclick="applyCpn()">Apply</button></div>
+      <div class="sum-row total"><span>Total</span><span id="total">₹0</span></div>
+      <button class="btn-pri" style="width:100%;padding:14px;font-size:13px;margin-top:14px" onclick="showToast('✦ Redirecting to secure checkout…')">Proceed to Checkout →</button>
+      <div style="text-align:center;margin-top:12px;font-size:11px;color:var(--lt-muted)">🔒 Secure &amp; Encrypted Checkout</div>
+      <div style="margin-top:16px;padding:14px;background:var(--cream);border-radius:8px;text-align:center">
+        <p style="font-size:11px;color:var(--muted);margin-bottom:7px">Need help? Chat with us!</p>
+        <a href="https://wa.me/919876543210" target="_blank" style="display:inline-flex;align-items:center;gap:5px;background:#25D366;color:#fff;padding:8px 16px;border-radius:24px;font-size:12px;font-weight:600;text-decoration:none">💬 WhatsApp</a>
       </div>
     </div>
   </div>
 </div>
-
-<!-- RECOMMENDED -->
-<section class="section bg-cream">
-  <div class="section-header">
-    <span class="section-label">You Might Love</span>
-    <h2 class="section-title">Recommended <em>For You</em></h2>
-    <div class="divider"></div>
-  </div>
-  <div class="product-grid" id="rec-grid"></div>
+<section class="sec bg-cream">
+  <div class="sec-hdr"><span class="sec-lbl">You Might Love</span><h2 class="sec-title">Recommended <em>For You</em></h2><div class="divider"></div></div>
+  <div class="prod-grid" id="rec-grid"></div>
 </section>
 
 <footer class="footer">
-  <div class="footer-top">
-    <div class="footer-brand">
-      <a href="index.html" class="logo">
-        <div class="logo-icon">✦</div>
-        <div class="logo-text">
-          <span class="logo-main" style="color:var(--gold-lt)">Saree Palace</span>
-          <span class="logo-sub">Est. 1987 · Handcrafted Elegance</span>
-        </div>
-      </a>
-      <p>Your most trusted destination for authentic Indian ethnic wear.</p>
-      <div class="footer-social-icons">
-        <a href="https://wa.me/919876543210" target="_blank" class="footer-social-btn">💬</a>
-        <a href="https://www.instagram.com/" target="_blank" class="footer-social-btn">📸</a>
-        <a href="https://www.facebook.com/" target="_blank" class="footer-social-btn">📘</a>
-        <a href="https://www.youtube.com/" target="_blank" class="footer-social-btn">▶️</a>
+  <div class="foot-top">
+    <div class="foot-brand">
+      <a href="index.html" class="logo"><div class="logo-icon">✦</div><div class="logo-text"><span class="logo-main" style="color:var(--gold-lt)">Saree Palace</span><span class="logo-sub">Est. 1987 · Handcrafted Elegance</span></div></a>
+      <p>Your most trusted destination for authentic Indian ethnic wear. Visit us at Hampankatta, Mangalore.</p>
+      <div class="foot-social">
+        <a href="https://wa.me/919876543210" target="_blank" class="foot-soc-btn">💬</a>
+        <a href="https://www.instagram.com/" target="_blank" class="foot-soc-btn">📸</a>
+        <a href="https://www.facebook.com/" target="_blank" class="foot-soc-btn">📘</a>
+        <a href="https://www.youtube.com/" target="_blank" class="foot-soc-btn">▶️</a>
       </div>
     </div>
-    <div class="footer-col">
-      <h5>Quick Links</h5>
-      <a href="index.html">Home</a>
-      <a href="collections.html">Collections</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="footer-col">
-      <h5>Categories</h5>
-      <a href="collections.html?cat=silk">Silk Sarees</a>
-      <a href="collections.html?cat=cotton">Cotton Sarees</a>
-      <a href="collections.html?cat=bridal">Bridal Sarees</a>
-    </div>
-    <div class="footer-col">
-      <h5>Help</h5>
-      <a href="contact.html">Track Order</a>
-      <a href="contact.html">Returns</a>
-      <a href="contact.html">FAQ</a>
-    </div>
+    <div class="foot-col"><h5>Quick Links</h5><a href="index.html">Home</a><a href="collections.html">Collections</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></div>
+    <div class="foot-col"><h5>Categories</h5><a href="collections.html?cat=silk">Silk Sarees</a><a href="collections.html?cat=cotton">Cotton Sarees</a><a href="collections.html?cat=bridal">Bridal Sarees</a><a href="collections.html?cat=designer">Designer</a></div>
+    <div class="foot-col"><h5>Help</h5><a href="contact.html">Track Order</a><a href="contact.html">Returns</a><a href="contact.html">FAQ</a><a href="contact.html">Contact</a></div>
   </div>
-  <div class="footer-divider"></div>
-  <div class="footer-bottom">
+  <div class="foot-div"></div>
+  <div class="foot-bot">
     <p>© 2025 Saree Palace, Hampankatta, Mangalore. All rights reserved.</p>
     <p><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></p>
   </div>
 </footer>
-
-<div class="floating-social">
-  <a href="https://wa.me/919876543210" target="_blank" class="float-btn float-whatsapp">💬</a>
-  <a href="https://www.instagram.com/" target="_blank" class="float-btn float-instagram">📸</a>
-  <button class="float-btn float-back-top" id="back-top">↑</button>
+<div class="float-wrap">
+  <a href="https://wa.me/919876543210" target="_blank" class="fl-btn fl-wa">💬</a>
+  <a href="https://www.instagram.com/" target="_blank" class="fl-btn fl-ig">📸</a>
+  <button class="fl-btn fl-top" id="back-top">↑</button>
 </div>
-
 <script src="script.js"></script>
 <script>
-  function applyCoupon() {
-    const val = document.getElementById('coupon-input').value.trim().toUpperCase();
-    if (val === 'PALACE10') showToast('✦ Coupon applied! 10% discount added.');
-    else showToast('✗ Invalid coupon code. Try PALACE10');
-  }
-
-  // Recommended
-  const recIds = [3, 7, 13, 14];
-  const recGrid = document.getElementById('rec-grid');
-  recGrid.innerHTML = recIds.map(id => {
-    const p = PRODUCTS.find(x => x.id === id);
-    if (!p) return '';
-    const d = Math.round((1 - p.price / p.oldPrice) * 100);
-    return `
-      <div class="product-card" onclick="window.location.href='product.html?id=${p.id}'">
-        <div class="product-img">
-          <img src="${p.img}" alt="${p.name}" loading="lazy"/>
-          <div class="product-badge">${p.badge}</div>
-        </div>
-        <div class="product-info">
-          <h4>${p.name}</h4>
-          <p class="product-material">${p.material}</p>
-          <div class="product-price">
-            <span class="price-now">₹${p.price.toLocaleString('en-IN')}</span>
-            <span class="price-old">₹${p.oldPrice.toLocaleString('en-IN')}</span>
-            <span class="price-off">${d}% off</span>
-          </div>
-          <div class="product-actions">
-            <a href="product.html?id=${p.id}" class="btn-view" onclick="event.stopPropagation()">View</a>
-            <button class="btn-addcart" onclick="event.stopPropagation();addToCart(${p.id})">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-    `;
-  }).join('');
+(function(){
+  var h=document.getElementById('ham-btn'),n=document.getElementById('mnav'),c=document.getElementById('mnav-close'),b=document.getElementById('mnav-bg');
+  function open(){n.classList.add('open');document.body.style.overflow='hidden';h&&h.classList.add('open');}
+  function close(){n.classList.remove('open');document.body.style.overflow='';h&&h.classList.remove('open');}
+  if(h)h.addEventListener('click',open);
+  if(c)c.addEventListener('click',close);
+  if(b)b.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+<script>
+function applyCpn(){const v=document.getElementById('cpn').value.trim().toUpperCase();showToast(v==='PALACE10'?'✦ Coupon applied! 10% discount added.':'✗ Invalid code. Try PALACE10');}
+const rids=[3,7,13,14];
+document.getElementById('rec-grid').innerHTML=rids.map(id=>{
+  const p=PRODUCTS.find(x=>x.id===id);if(!p)return'';
+  const d=Math.round((1-p.price/p.oldPrice)*100);
+  return`<div class="prod-card" onclick="location.href='product.html?id=${p.id}'">
+    <div class="prod-img"><img src="${p.img}" alt="${p.name}" loading="lazy"/><div class="prod-badge">${p.badge}</div></div>
+    <div class="prod-info">
+      <div class="prod-name">${p.name}</div><div class="prod-mat">${p.material}</div>
+      <div class="prod-price"><span class="p-now">₹${p.price.toLocaleString('en-IN')}</span><span class="p-old">₹${p.oldPrice.toLocaleString('en-IN')}</span><span class="p-off">${d}% off</span></div>
+      <div class="prod-acts"><a href="product.html?id=${p.id}" class="btn-view" onclick="event.stopPropagation()">View</a><button class="btn-ac" onclick="event.stopPropagation();addToCart(${p.id})">Add to Cart</button></div>
+    </div></div>`;}).join('');
 </script>
 </body>
 </html>

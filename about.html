@@ -7,38 +7,73 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
-<div class="announcement-bar">
-  <span>✦ Free Shipping on orders above ₹1499 &nbsp;&nbsp;&nbsp; ✦ Use code PALACE10 for 10% off &nbsp;&nbsp;&nbsp; ✦ New Arrivals Every Week! &nbsp;&nbsp;&nbsp; ✦ Authentic Handloom &amp; Silk Sarees since 1987</span>
+<!-- MOBILE NAV -->
+<div class="mnav" id="mnav">
+  <div class="mnav-bg" id="mnav-bg"></div>
+  <div class="mnav-drawer">
+    <div class="mnav-hdr">
+      <a href="index.html" class="logo">
+        <div class="logo-icon" style="width:30px;height:30px;font-size:13px">✦</div>
+        <div class="logo-text"><span class="logo-main">Saree Palace</span><span class="logo-sub">Est. 1987</span></div>
+      </a>
+      <button class="mnav-close" id="mnav-close">✕</button>
+    </div>
+    <div class="mnav-search">
+      <span class="si">🔍</span>
+      <input type="text" id="m-search" placeholder="Search sarees…"/>
+      <div class="srp mnav-srp" id="m-srp"></div>
+    </div>
+    <nav class="mnav-links">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="product.html">Products</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">🛍 My Cart</a>
+    </nav>
+    <div class="mnav-cats">
+      <h6>Shop by Category</h6>
+      <div class="mnav-cat-grid">
+        <a href="collections.html?cat=silk" class="mnav-cat-btn"><span class="cat-dot" style="background:#c9973a"></span>Silk</a>
+        <a href="collections.html?cat=cotton" class="mnav-cat-btn"><span class="cat-dot" style="background:#8B4513"></span>Cotton</a>
+        <a href="collections.html?cat=bridal" class="mnav-cat-btn"><span class="cat-dot" style="background:#c0392b"></span>Bridal</a>
+        <a href="collections.html?cat=designer" class="mnav-cat-btn"><span class="cat-dot" style="background:#8e44ad"></span>Designer</a>
+        <a href="collections.html?cat=party" class="mnav-cat-btn"><span class="cat-dot" style="background:#e91e63"></span>Party Wear</a>
+        <a href="collections.html" class="mnav-cat-btn">✦ All</a>
+      </div>
+    </div>
+    <div class="mnav-foot">
+      <a href="https://wa.me/919876543210" target="_blank" class="mnav-wa">💬 WhatsApp</a>
+      <a href="https://www.instagram.com/" target="_blank" class="mnav-ig">📸 Instagram</a>
+    </div>
+  </div>
 </div>
-
+<div class="ann-bar"><span>✦ Free Shipping above ₹1499 &nbsp;&nbsp; ✦ Code PALACE10 for 10% off &nbsp;&nbsp; ✦ New Arrivals Every Week! &nbsp;&nbsp; ✦ Authentic Handloom &amp; Silk since 1987</span></div>
 <header class="header">
   <div class="header-top">
     <a href="index.html" class="logo">
       <div class="logo-icon">✦</div>
-      <div class="logo-text">
-        <span class="logo-main">Saree Palace</span>
-        <span class="logo-sub">Est. 1987 · Handcrafted Elegance</span>
-      </div>
+      <div class="logo-text"><span class="logo-main">Saree Palace</span><span class="logo-sub">Est. 1987 · Handcrafted Elegance</span></div>
     </a>
-    <nav class="header-nav">
-      <a href="index.html">Home</a>
-      <a href="collections.html">Collections</a>
-      <a href="product.html">Products</a>
+    <nav class="hdr-nav">
+      <a href="index.html" >Home</a>
+      <a href="collections.html" >Collections</a>
+      <a href="product.html" >Products</a>
       <a href="about.html" class="active">About Us</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" >Contact</a>
     </nav>
-    <div class="header-actions">
-      <div class="search-wrapper">
-        <span class="search-icon">🔍</span>
-        <input type="text" id="search-input" placeholder="Search sarees…"/>
-        <div class="search-results-panel" id="search-panel"></div>
+    <div class="hdr-actions">
+      <div class="search-wrap">
+        <span class="si">🔍</span>
+        <input type="text" id="d-search" placeholder="Search sarees…"/>
+        <div class="srp" id="d-srp"></div>
       </div>
       <a href="cart.html" class="btn-cart">🛍 Cart (<span class="cart-count">0</span>)</a>
+      <button class="hamburger" id="ham-btn"><span></span><span></span><span></span></button>
     </div>
   </div>
-  <nav class="category-nav">
-    <a href="collections.html?cat=all"><span class="cat-dot" style="background:var(--gold)"></span>All</a>
+  <nav class="cat-nav">
+    <a href="collections.html"><span class="cat-dot" style="background:var(--gold)"></span>All</a>
     <a href="collections.html?cat=silk"><span class="cat-dot" style="background:#c9973a"></span>Silk Sarees</a>
     <a href="collections.html?cat=cotton"><span class="cat-dot" style="background:#8B4513"></span>Cotton Sarees</a>
     <a href="collections.html?cat=bridal"><span class="cat-dot" style="background:#c0392b"></span>Bridal Sarees</a>
@@ -47,223 +82,112 @@
   </nav>
 </header>
 
-<!-- PAGE HERO -->
-<section class="page-hero">
-  <div class="breadcrumb"><a href="index.html">Home</a><span>›</span> About Us</div>
-  <h1>Our <em style="font-style:italic;color:var(--gold-lt)">Story</em></h1>
-  <p>Three decades of love for Indian textile heritage. From a small shop in Hampankatta to thousands of happy families across India.</p>
-</section>
-
-<!-- STORY SECTION -->
-<section class="about-story">
-  <div class="about-story-img">
-    <img src="https://images.unsplash.com/photo-1583391733981-8498408ee4b6?w=900&q=85" alt="Saree Palace Store"/>
-  </div>
-  <div>
-    <span class="section-label">Our Heritage</span>
-    <h2 class="section-title" style="text-align:left;margin-bottom:20px">Born in <em>Hampankatta</em>,<br/>Woven with Pride</h2>
-    <div class="divider" style="margin:0 0 28px 0"></div>
-    <p style="color:var(--muted);margin-bottom:18px;line-height:1.9">
-      In 1987, Saree Palace opened its doors in the heart of Hampankatta, Mangalore — with a simple belief: every woman deserves to be draped in the finest Indian silk and cotton, at honest prices.
-    </p>
-    <p style="color:var(--muted);margin-bottom:18px;line-height:1.9">
-      What started as a single-room boutique has grown into one of the most trusted names in ethnic wear across coastal Karnataka. Today we carry over 5,000 sarees sourced directly from the finest weavers in Kanchipuram, Varanasi, Patan, and Chanderi.
-    </p>
-    <p style="color:var(--muted);margin-bottom:32px;line-height:1.9">
-      Our mission remains unchanged — to preserve the art of handloom weaving while making authentic sarees accessible to every Indian household.
-    </p>
-    <div style="display:flex;gap:40px">
-      <div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:700;color:var(--burgundy)">37+</div>
-        <div style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--light-muted)">Years of Legacy</div>
-      </div>
-      <div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:700;color:var(--burgundy)">50k+</div>
-        <div style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--light-muted)">Happy Families</div>
-      </div>
-      <div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:700;color:var(--burgundy)">5,000+</div>
-        <div style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--light-muted)">Saree Designs</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VALUES -->
-<div class="about-values">
-  <div class="value-card">
-    <div class="value-icon">🧵</div>
-    <div class="value-title">Authentic Sourcing</div>
-    <p class="value-desc">We travel directly to weaving communities in Kanchipuram, Varanasi, Chanderi and Patan to handpick every saree. No middlemen, pure quality.</p>
-  </div>
-  <div class="value-card">
-    <div class="value-icon">💛</div>
-    <div class="value-title">Weaver Welfare</div>
-    <p class="value-desc">We pay fair prices to our artisan partners and are committed to preserving traditional weaving crafts for future generations.</p>
-  </div>
-  <div class="value-card">
-    <div class="value-icon">🛡️</div>
-    <div class="value-title">Quality Guarantee</div>
-    <p class="value-desc">Every saree is inspected by our in-house quality team before shipping. We only sell what we're proud to wear ourselves.</p>
-  </div>
+<div class="pg-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a><span>›</span>About Us</div>
+  <h1>Our <em>Story</em></h1>
+  <p>Three decades of love for Indian textile heritage — from Hampankatta to homes across India.</p>
 </div>
 
-<!-- TEAM -->
-<section class="section">
-  <div class="section-header">
-    <span class="section-label">The People Behind the Palace</span>
-    <h2 class="section-title">Meet Our <em>Team</em></h2>
-    <div class="divider"></div>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
-    <div style="text-align:center;padding:32px 24px;background:var(--white);border-radius:12px;box-shadow:0 2px 12px rgba(107,26,42,0.06)">
-      <div style="width:80px;height:80px;border-radius:50%;background:var(--cream-dk);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:28px;border:3px solid var(--gold)">👩</div>
-      <h4 style="font-size:20px;color:var(--burgundy-dk);margin-bottom:4px">Sunanda Kamath</h4>
-      <p style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:12px">Founder & Director</p>
-      <p style="font-size:13px;color:var(--muted);line-height:1.8">Sunanda founded Saree Palace in 1987 with a vision to bring authentic silk sarees to Mangalore at accessible prices.</p>
-    </div>
-    <div style="text-align:center;padding:32px 24px;background:var(--white);border-radius:12px;box-shadow:0 2px 12px rgba(107,26,42,0.06)">
-      <div style="width:80px;height:80px;border-radius:50%;background:var(--cream-dk);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:28px;border:3px solid var(--gold)">👨</div>
-      <h4 style="font-size:20px;color:var(--burgundy-dk);margin-bottom:4px">Rajesh Kamath</h4>
-      <p style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:12px">Managing Director</p>
-      <p style="font-size:13px;color:var(--muted);line-height:1.8">Rajesh manages operations and curates the bridal collection, travelling to weaving towns every season.</p>
-    </div>
-    <div style="text-align:center;padding:32px 24px;background:var(--white);border-radius:12px;box-shadow:0 2px 12px rgba(107,26,42,0.06)">
-      <div style="width:80px;height:80px;border-radius:50%;background:var(--cream-dk);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:28px;border:3px solid var(--gold)">👩</div>
-      <h4 style="font-size:20px;color:var(--burgundy-dk);margin-bottom:4px">Deepa Shenoy</h4>
-      <p style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:12px">Head of Styling</p>
-      <p style="font-size:13px;color:var(--muted);line-height:1.8">With 15 years of experience, Deepa helps brides and festive shoppers find their perfect drape.</p>
+<section class="about-story">
+  <div class="story-img"><img src="saree.jpg.jfif" alt="Saree Palace Store"/></div>
+  <div>
+    <span class="sec-lbl">Our Heritage</span>
+    <h2 class="sec-title" style="text-align:left;margin-bottom:16px">Born in <em>Hampankatta</em>,<br/>Woven with Pride</h2>
+    <div class="divider" style="margin:0 0 22px 0"></div>
+    <p style="color:var(--muted);margin-bottom:14px;line-height:1.9;font-size:14px">In 1987, Saree Palace opened its doors in the heart of Hampankatta, Mangalore — with a simple belief: every woman deserves to be draped in the finest Indian silk and cotton, at honest prices.</p>
+    <p style="color:var(--muted);margin-bottom:14px;line-height:1.9;font-size:14px">What started as a single-room boutique has grown into one of the most trusted names in ethnic wear across coastal Karnataka. Today we carry over 5,000 sarees sourced directly from master weavers in Kanchipuram, Varanasi, Patan, and Chanderi.</p>
+    <p style="color:var(--muted);margin-bottom:28px;line-height:1.9;font-size:14px">Our mission remains unchanged — to preserve the art of handloom weaving while making authentic sarees accessible to every Indian household.</p>
+    <div class="story-stats">
+      <div><div class="stat-num">37+</div><div class="stat-lbl">Years of Legacy</div></div>
+      <div><div class="stat-num">50k+</div><div class="stat-lbl">Happy Families</div></div>
+      <div><div class="stat-num">5,000+</div><div class="stat-lbl">Saree Designs</div></div>
     </div>
   </div>
 </section>
 
-<!-- LIVE MAP -->
-<section class="map-section" style="background:var(--cream)">
-  <span class="section-label" style="display:block;text-align:center;margin-bottom:8px">Find Us</span>
-  <h2>Visit <em style="font-style:italic;color:var(--gold-dk)">Saree Palace</em></h2>
-  <p>We're located in the heart of Hampankatta, Mangalore. Come experience our full collection in person!</p>
+<div class="about-vals">
+  <div class="val-card"><div class="val-icon">🧵</div><div class="val-title">Authentic Sourcing</div><p class="val-desc">We travel directly to weaving communities in Kanchipuram, Varanasi, Chanderi and Patan to handpick every saree. No middlemen, pure quality.</p></div>
+  <div class="val-card"><div class="val-icon">💛</div><div class="val-title">Weaver Welfare</div><p class="val-desc">We pay fair prices to our artisan partners and are committed to preserving traditional weaving crafts for future generations.</p></div>
+  <div class="val-card"><div class="val-icon">🛡️</div><div class="val-title">Quality Guarantee</div><p class="val-desc">Every saree is inspected by our in-house quality team before shipping. We only sell what we're proud to wear ourselves.</p></div>
+</div>
 
-  <div style="display:flex;gap:24px;max-width:280px;margin:0 auto 32px;flex-wrap:wrap;justify-content:center">
-    <a href="https://wa.me/919876543210" target="_blank" style="display:flex;align-items:center;gap:8px;background:#25D366;color:#fff;padding:12px 20px;border-radius:24px;font-size:13px;font-weight:600;text-decoration:none;transition:all 0.3s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
-      💬 WhatsApp Us
-    </a>
-    <a href="https://maps.google.com/?q=Saree+Palace+Hampankatta+Mangalore" target="_blank" style="display:flex;align-items:center;gap:8px;background:var(--burgundy);color:var(--gold-lt);padding:12px 20px;border-radius:24px;font-size:13px;font-weight:600;text-decoration:none;transition:all 0.3s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
-      📍 Get Directions
-    </a>
-  </div>
-
-  <div class="map-container">
-    <!-- Live Google Map of Hampankatta, Mangalore -->
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0!2d74.8430!3d12.8698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35a4c7c5bea11%3A0x9e8b4f1d2d1234ab!2sHampankatta%2C%20Mangalore%2C%20Karnataka%20575001!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      title="Saree Palace, Hampankatta, Mangalore">
-    </iframe>
-  </div>
-
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px">
-    <div style="background:var(--white);border-radius:12px;padding:28px;text-align:center;box-shadow:0 2px 12px rgba(107,26,42,0.06)">
-      <div style="font-size:28px;margin-bottom:12px">📍</div>
-      <h4 style="font-size:16px;color:var(--burgundy-dk);margin-bottom:8px">Address</h4>
-      <p style="font-size:13px;color:var(--muted);line-height:1.8">Saree Palace, Hampankatta Main Road,<br/>Mangalore, Karnataka – 575 001</p>
-    </div>
-    <div style="background:var(--white);border-radius:12px;padding:28px;text-align:center;box-shadow:0 2px 12px rgba(107,26,42,0.06)">
-      <div style="font-size:28px;margin-bottom:12px">🕐</div>
-      <h4 style="font-size:16px;color:var(--burgundy-dk);margin-bottom:8px">Store Hours</h4>
-      <p style="font-size:13px;color:var(--muted);line-height:1.8">Mon – Sat: 9:30 AM – 8:30 PM<br/>Sunday: 10:00 AM – 7:00 PM</p>
-    </div>
-    <div style="background:var(--white);border-radius:12px;padding:28px;text-align:center;box-shadow:0 2px 12px rgba(107,26,42,0.06)">
-      <div style="font-size:28px;margin-bottom:12px">📞</div>
-      <h4 style="font-size:16px;color:var(--burgundy-dk);margin-bottom:8px">Contact</h4>
-      <p style="font-size:13px;color:var(--muted);line-height:1.8">+91 98765 43210<br/>sareepalacelace@gmail.com</p>
-    </div>
+<section class="sec">
+  <div class="sec-hdr"><span class="sec-lbl">The People Behind the Palace</span><h2 class="sec-title">Meet Our <em>Team</em></h2><div class="divider"></div></div>
+  <div class="team-grid">
+    <div class="team-card"><div class="team-av">👩</div><div class="team-name">Sunanda Kamath</div><div class="team-role">Founder &amp; Director</div><p class="team-bio">Sunanda founded Saree Palace in 1987 with a vision to bring authentic silk sarees to Mangalore at accessible prices.</p></div>
+    <div class="team-card"><div class="team-av">👨</div><div class="team-name">Rajesh Kamath</div><div class="team-role">Managing Director</div><p class="team-bio">Rajesh manages operations and curates the bridal collection, travelling to weaving towns every season.</p></div>
+    <div class="team-card"><div class="team-av">👩</div><div class="team-name">Deepa Shenoy</div><div class="team-role">Head of Styling</div><p class="team-bio">With 15 years of experience, Deepa helps brides and festive shoppers find their perfect drape.</p></div>
   </div>
 </section>
 
-<!-- SOCIAL SECTION -->
-<section class="section" style="text-align:center;background:var(--burgundy-dk)">
-  <span class="section-label" style="color:var(--gold)">Follow Our Journey</span>
-  <h2 class="section-title" style="color:var(--white);margin-bottom:12px">Find Us on <em>Social Media</em></h2>
-  <p style="color:rgba(255,255,255,0.6);margin-bottom:40px;max-width:480px;margin-left:auto;margin-right:auto">See our new arrivals, draping tutorials, and customer stories on Instagram. Chat with us instantly on WhatsApp!</p>
-  <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap">
-    <a href="https://wa.me/919876543210" target="_blank"
-      style="display:flex;align-items:center;gap:12px;background:#25D366;color:#fff;padding:16px 32px;border-radius:32px;font-size:15px;font-weight:600;text-decoration:none;transition:all 0.3s;box-shadow:0 4px 20px rgba(37,211,102,0.35)"
-      onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 32px rgba(37,211,102,0.5)'"
-      onmouseout="this.style.transform='';this.style.boxShadow='0 4px 20px rgba(37,211,102,0.35)'">
-      💬 &nbsp;Chat on WhatsApp
-    </a>
-    <a href="https://www.instagram.com/" target="_blank"
-      style="display:flex;align-items:center;gap:12px;background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%);color:#fff;padding:16px 32px;border-radius:32px;font-size:15px;font-weight:600;text-decoration:none;transition:all 0.3s;box-shadow:0 4px 20px rgba(214,36,159,0.35)"
-      onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 32px rgba(214,36,159,0.5)'"
-      onmouseout="this.style.transform='';this.style.boxShadow='0 4px 20px rgba(214,36,159,0.35)'">
-      📸 &nbsp;Follow on Instagram
-    </a>
-    <a href="https://www.facebook.com/" target="_blank"
-      style="display:flex;align-items:center;gap:12px;background:#1877F2;color:#fff;padding:16px 32px;border-radius:32px;font-size:15px;font-weight:600;text-decoration:none;transition:all 0.3s;box-shadow:0 4px 20px rgba(24,119,242,0.35)"
-      onmouseover="this.style.transform='translateY(-3px)'"
-      onmouseout="this.style.transform=''">
-      📘 &nbsp;Like on Facebook
-    </a>
+<section class="map-sec">
+  <span class="sec-lbl" style="display:block;text-align:center;margin-bottom:6px">Find Us</span>
+  <h2>Visit <em>Saree Palace</em></h2>
+  <p>We're in the heart of Hampankatta, Mangalore. Come experience our full collection in person!</p>
+  <div class="map-btns">
+    <a href="https://wa.me/919876543210" target="_blank" class="map-btn map-btn-wa">💬 WhatsApp Us</a>
+    <a href="https://maps.google.com/?q=Saree+Palace+Hampankatta+Mangalore" target="_blank" class="map-btn map-btn-dir">📍 Get Directions</a>
+  </div>
+  <div class="map-wrap">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0!2d74.8430!3d12.8698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35a4c7c5bea11%3A0x9e8b4f1d2d1234ab!2sHampankatta%2C%20Mangalore%2C%20Karnataka%20575001!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Saree Palace Hampankatta"></iframe>
+  </div>
+  <div class="map-info-grid">
+    <div class="map-info-card"><div class="map-info-icon">📍</div><div class="map-info-title">Address</div><p class="map-info-text">Saree Palace, Hampankatta Main Road,<br/>Mangalore, Karnataka – 575 001</p></div>
+    <div class="map-info-card"><div class="map-info-icon">🕐</div><div class="map-info-title">Store Hours</div><p class="map-info-text">Mon – Sat: 9:30 AM – 8:30 PM<br/>Sunday: 10:00 AM – 7:00 PM</p></div>
+    <div class="map-info-card"><div class="map-info-icon">📞</div><div class="map-info-title">Contact</div><p class="map-info-text">+91 98765 43210<br/>hello@sareepalacelace.com</p></div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<section class="social-sec">
+  <span class="sec-lbl">Follow Our Journey</span>
+  <h2 class="sec-title">Find Us on <em>Social Media</em></h2>
+  <p style="color:rgba(255,255,255,.6);max-width:460px;margin:10px auto 0;font-size:14px">See new arrivals, draping tutorials, and customer stories. Chat instantly on WhatsApp!</p>
+  <div class="social-btns">
+    <a href="https://wa.me/919876543210" target="_blank" class="soc-btn soc-wa">💬 Chat on WhatsApp</a>
+    <a href="https://www.instagram.com/" target="_blank" class="soc-btn soc-ig">📸 Follow on Instagram</a>
+    <a href="https://www.facebook.com/" target="_blank" class="soc-btn soc-fb">📘 Like on Facebook</a>
+  </div>
+</section>
+
 <footer class="footer">
-  <div class="footer-top">
-    <div class="footer-brand">
-      <a href="index.html" class="logo">
-        <div class="logo-icon">✦</div>
-        <div class="logo-text">
-          <span class="logo-main" style="color:var(--gold-lt)">Saree Palace</span>
-          <span class="logo-sub">Est. 1987 · Handcrafted Elegance</span>
-        </div>
-      </a>
-      <p>Your most trusted destination for authentic Indian ethnic wear. Visit us at Hampankatta, Mangalore or shop online 24/7.</p>
-      <div class="footer-social-icons">
-        <a href="https://wa.me/919876543210" target="_blank" class="footer-social-btn">💬</a>
-        <a href="https://www.instagram.com/" target="_blank" class="footer-social-btn">📸</a>
-        <a href="https://www.facebook.com/" target="_blank" class="footer-social-btn">📘</a>
-        <a href="https://www.youtube.com/" target="_blank" class="footer-social-btn">▶️</a>
+  <div class="foot-top">
+    <div class="foot-brand">
+      <a href="index.html" class="logo"><div class="logo-icon">✦</div><div class="logo-text"><span class="logo-main" style="color:var(--gold-lt)">Saree Palace</span><span class="logo-sub">Est. 1987 · Handcrafted Elegance</span></div></a>
+      <p>Your most trusted destination for authentic Indian ethnic wear. Visit us at Hampankatta, Mangalore.</p>
+      <div class="foot-social">
+        <a href="https://wa.me/919876543210" target="_blank" class="foot-soc-btn">💬</a>
+        <a href="https://www.instagram.com/" target="_blank" class="foot-soc-btn">📸</a>
+        <a href="https://www.facebook.com/" target="_blank" class="foot-soc-btn">📘</a>
+        <a href="https://www.youtube.com/" target="_blank" class="foot-soc-btn">▶️</a>
       </div>
     </div>
-    <div class="footer-col">
-      <h5>Quick Links</h5>
-      <a href="index.html">Home</a>
-      <a href="collections.html">Collections</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="footer-col">
-      <h5>Categories</h5>
-      <a href="collections.html?cat=silk">Silk Sarees</a>
-      <a href="collections.html?cat=cotton">Cotton Sarees</a>
-      <a href="collections.html?cat=bridal">Bridal Sarees</a>
-      <a href="collections.html?cat=designer">Designer</a>
-      <a href="collections.html?cat=party">Party Wear</a>
-    </div>
-    <div class="footer-col">
-      <h5>Help</h5>
-      <a href="contact.html">Track Order</a>
-      <a href="contact.html">Returns</a>
-      <a href="contact.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-    </div>
+    <div class="foot-col"><h5>Quick Links</h5><a href="index.html">Home</a><a href="collections.html">Collections</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></div>
+    <div class="foot-col"><h5>Categories</h5><a href="collections.html?cat=silk">Silk Sarees</a><a href="collections.html?cat=cotton">Cotton Sarees</a><a href="collections.html?cat=bridal">Bridal Sarees</a><a href="collections.html?cat=designer">Designer</a></div>
+    <div class="foot-col"><h5>Help</h5><a href="contact.html">Track Order</a><a href="contact.html">Returns</a><a href="contact.html">FAQ</a><a href="contact.html">Contact</a></div>
   </div>
-  <div class="footer-divider"></div>
-  <div class="footer-bottom">
+  <div class="foot-div"></div>
+  <div class="foot-bot">
     <p>© 2025 Saree Palace, Hampankatta, Mangalore. All rights reserved.</p>
     <p><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></p>
   </div>
 </footer>
-
-<div class="floating-social">
-  <a href="https://wa.me/919876543210" target="_blank" class="float-btn float-whatsapp">💬</a>
-  <a href="https://www.instagram.com/" target="_blank" class="float-btn float-instagram">📸</a>
-  <button class="float-btn float-back-top" id="back-top">↑</button>
+<div class="float-wrap">
+  <a href="https://wa.me/919876543210" target="_blank" class="fl-btn fl-wa">💬</a>
+  <a href="https://www.instagram.com/" target="_blank" class="fl-btn fl-ig">📸</a>
+  <button class="fl-btn fl-top" id="back-top">↑</button>
 </div>
-
 <script src="script.js"></script>
+<script>
+(function(){
+  var h=document.getElementById('ham-btn'),n=document.getElementById('mnav'),c=document.getElementById('mnav-close'),b=document.getElementById('mnav-bg');
+  function open(){n.classList.add('open');document.body.style.overflow='hidden';h&&h.classList.add('open');}
+  function close(){n.classList.remove('open');document.body.style.overflow='';h&&h.classList.remove('open');}
+  if(h)h.addEventListener('click',open);
+  if(c)c.addEventListener('click',close);
+  if(b)b.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+
 </body>
 </html>
